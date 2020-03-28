@@ -1,0 +1,102 @@
+/*
+capsule-padding: 6PX; // 胶囊的上下padding距离
+$capsule-height: 32PX; // 胶囊的高度
+$capsule-width: 88PX; // 胶囊的宽度
+$navigation-height: $capsule-padding * 2 + $capsule-height;
+$navigation-font-size: 15PX;
+$navigation-icon-font-size: 25PX;
+$navigation-box-shadow: 0 2PX 2PX #222;
+屏幕宽度750rpx 两个字如推荐占36rpx
+2x+160+y=750 2x+y=590
+x=左边距  y字体间距
+
+下划线120rpx 占字体下正中央 左边距200-(120-70)/2=175 实际字体在view中为70左右
+*/
+.navBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:#fff;
+  z-index: 999;
+}
+.image-item{
+  width: 100%;
+  border-radius: 10rpx;
+  box-shadow: 4rpx 6rpx 6rpx #CDCDCD;
+}
+.image-background{
+  width: 90%; 
+  margin:40rpx auto;
+  border-radius: 10rpx;
+}
+.flex-row{
+  flex-direction: row;
+  display: flex;
+}
+.onTabLine{
+  width: 120rpx;
+  height: 5rpx;
+  background-color:#4074DD;
+  margin-top:15rpx;
+}
+.line{
+  width: 750rpx;
+  height: 2rpx;
+  background-color: #F2F2F2;
+  margin: 0rpx auto 0 auto;
+}
+.recomandation,.concern{
+  font-size:35rpx;
+  margin-top: 20rpx;
+  width: 80rpx;
+  color:#CDCDCD;
+
+}
+.recomandation{
+  margin-left: 200rpx;
+}
+.concern{
+  margin-left: 190rpx;
+}
+.active{
+  color:#4074DD;
+}
+.selectTab{
+  position: fixed;
+  height: 90rpx;
+  z-index: 999;
+  background: #fff;
+}
+
+.searchfield{
+  flex-direction: row;
+  display: flex;
+  border: 2rpx solid #93b4f8;
+  border-radius: 36rpx;
+  margin-left:32rpx;
+  width:450rpx;
+  padding:8rpx 0 0 6rpx;
+  font-size:30rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.search-icon{
+  margin-left: 15rpx;
+  margin-right: 5rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

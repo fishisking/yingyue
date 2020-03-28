@@ -1,0 +1,12 @@
+<!--pages/index/interests/interests.wxml-->
+<top-bar navH="{{navH}}" pageTitle="关注"></top-bar>
+
+  <scroll-view bindscroll="handlerScroll" scroll-y style="height: 100%;">
+    <view wx:for="{{interestslist}}" wx:key="unique" class="item">
+      <image src="{{item.imgUrl}}" class='head'></image>
+      <text>{{item.name}}</text>
+      <view class='background'></view>
+      <image wx:if="{{item.isInterest}}" src='./images/isInterest.png' class='guanzhu'></image>
+      <image wx:else src='./images/notInterest.png' class='guanzhu'></image>
+    </view>
+  </scroll-view>

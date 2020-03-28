@@ -1,0 +1,42 @@
+<!--pages/message/contact/contact.wxml-->
+<!--头部导航栏{{screenHeight*px2rpx+400}}-->
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="私信"></top-bar >
+<scroll-view class='container1' scroll-y="true"  style='height:1310rpx;'>
+  <view class='message-time'>05-11 9:26</view>
+  <view class='yours'>
+    <image src='http://a4.qpic.cn/psb?/V117Hh791l3WuC/8WHg17HnPddIXNlSYDVexeaxIdoPXo9qvRMdNakSanA!/m/dIMAAAAAAAAAnull&bo=BAEEAQAAAAADByI!&rf=photolist&t=5'></image>
+    <view class='bubble'><text>请问现在有空嘛!</text></view>
+  </view>
+  <view class='mine'>
+    <image src='http://a2.qpic.cn/psb?/V117Hh791l3WuC/OG24oLm*dsQw9O1wspbDbU6ZyOHqUcN.9tchEbkcKbE!/m/dFEBAAAAAAAAnull&bo=5AHkAQAAAAADByI!&rf=photolist&t=5'></image>
+    <text class='yidu'>已读</text>
+    <view class='bubble'><text>你好呀！</text></view>
+    
+  </view>
+
+  <view class='yours'>
+    <image src='http://a4.qpic.cn/psb?/V117Hh791l3WuC/8WHg17HnPddIXNlSYDVexeaxIdoPXo9qvRMdNakSanA!/m/dIMAAAAAAAAAnull&bo=BAEEAQAAAAADByI!&rf=photolist&t=5'></image>
+    <view class='bubble'><text>请问现在有空嘛?</text></view>
+    
+  </view>
+
+   <view class='mine'>
+    <image src='http://a2.qpic.cn/psb?/V117Hh791l3WuC/OG24oLm*dsQw9O1wspbDbU6ZyOHqUcN.9tchEbkcKbE!/m/dFEBAAAAAAAAnull&bo=5AHkAQAAAAADByI!&rf=photolist&t=5'></image>
+    <text class='yidu'>已读</text>
+    <view class='bubble'><text>你好呀！</text></view>
+    
+  </view>
+
+  <view class='yours'>
+    <image src='http://a4.qpic.cn/psb?/V117Hh791l3WuC/8WHg17HnPddIXNlSYDVexeaxIdoPXo9qvRMdNakSanA!/m/dIMAAAAAAAAAnull&bo=BAEEAQAAAAADByI!&rf=photolist&t=5'></image>
+    <view class='bubble'><text>请问现在有空嘛?</text></view>
+    
+  </view>
+</scroll-view>
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}">
+  <view class='input-item'>
+    <input class='input-txt'></input>
+    <image src='http://a1.qpic.cn/psb?/V117Hh791l3WuC/rI*Y*g7vJcWQg00wiE0g3Mmbo3bQDp93PfsqjvheJ18!/m/dIQAAAAAAAAAnull&bo=yQDIAAAAAAADByM!&rf=photolist&t=5'></image>
+  </view>
+  <image src='http://a2.qpic.cn/psb?/V117Hh791l3WuC/INb*wthIJF5BG7oU*2blRhRnR05TBAHxYuIOdr9XSAY!/m/dE0BAAAAAAAAnull&bo=yADIAAAAAAADByI!&rf=photolist&t=5'></image>
+</view>

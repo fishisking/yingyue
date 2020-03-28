@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-tag": "/component/dist/tag/index",
+    "van-action-sheet": "/component/dist/action-sheet/index",
+    "tabbar": "../../tabbarComponent/tabbar"
+  }
+}

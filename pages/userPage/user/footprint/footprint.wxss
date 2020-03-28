@@ -1,0 +1,56 @@
+/* pages/index/footprint/footprint.wxss */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  margin-top: 50rpx;
+  height: auto;
+}
+
+.item .date{
+  width: 250rpx;
+  line-height: 100rpx;
+}
+
+.item .background{
+  width: 50%;
+}
+
+
+.itemhead{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  color: gray;
+  line-height: 100rpx;
+}
+
+.delete{
+    padding: 10rpx;
+}
+
+.delete image{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+
+.content{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content .footprintRecord{
+  width: 190rpx;
+  height: 190rpx;
+  background: gray;
+  margin: 10rpx;
+  display: inline-block;
+}

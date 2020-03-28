@@ -1,0 +1,54 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="服务详情"></top-bar >
+<!--头部标题照片类型-->
+<scroll-view scroll-y="true" class="images-show" style='height:1320rpx;'>
+<view class='title'>
+  <text>女王照(单人照)</text>
+</view>
+<view class='price'>
+  <text class='nums' decode='{{true}}'>259&nbsp;</text>
+  <text>元起</text>
+</view>
+
+  <!--照片标题-->
+<view class='selectTab'>
+  <view class='flex-row'>
+    <view class="type1 {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    天生合群
+      <view class='onTabLine' wx:if="{{currentTab==0}}"></view>
+    </view>
+    <view class="type2 {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+    神秘莫测
+      <view class='onTabLine' wx:if="{{currentTab==1}}"></view>
+    </view>
+  </view>
+</view>
+<!--照片展示-->
+
+   <!--图片素材-->
+  <view class='images-display' wx:if="{{currentTab==0}}">
+    <view wx:for="{{roomList}}"  class="show-list">
+     <image src="{{item.url}}"/>          
+    </view>
+  </view>
+<!--图片素材2-->
+  <view class='images-display' wx:if="{{currentTab==1}}">
+    <view wx:for="{{roomList}}"  class="show-list">
+     <image src="{{item.url}}"/>          
+    </view>
+  </view>
+</scroll-view>
+
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}">
+  <view class="tab-content">
+    <view class="Collection">
+      <text>收藏</text>
+    </view>
+    <view class='service'>
+      <text>服务内容</text>
+    </view>
+    <view class='order' bindtap="goToSubscribe">
+      <text>预约</text>
+     </view>
+  </view> 
+</view>

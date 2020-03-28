@@ -1,0 +1,59 @@
+<!--pages/message/Systemmessage/sysmessage.wxml-->
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="系统通知"></top-bar >
+<!--分割线-->
+<view class="divLine"></view>
+<!--通知栏-->
+<scroll-view scroll-y="true"  style='height:{{screenHeight*px2rpx+400}}rpx;'>
+  <!--系统通知示例1-->
+  <view class='message-item'>
+  <view class='pic'>
+    <image src='../images/huodong.png'></image>
+  </view>
+    
+    
+
+  <!--系统通知文本内容-->
+  <view class='txt'>
+    <view class='title'>
+      <text>互联网人像摄影大赛即将开始：
+    百万大奖等你瓜分！
+      </text>
+    </view>
+    <view class='lasttime'>1小时前</view>
+  </view>
+  <view class='link'>
+    <image src="../images/del.png"></image>
+    <view></view>
+    <view class='link-txt'>进入活动</view>
+  </view>
+
+  </view>
+  
+<!--分割线-->
+<view class="divLine"></view>
+  <view class='message-item'>
+  <view class='pic'>
+    <image src='../images/dingdan.png'></image>
+  </view>
+    
+    
+
+  <!--系统通知文本内容-->
+  <view class='txt'>
+    <view class='title'>
+      <text>商家已完成，可前往取片！
+      </text>
+    </view>
+    <view class='lasttime'>1小时前</view>
+  </view>
+  <view class='link'>
+    <image src="../images/del.png"></image>
+    <view></view>
+    <view class='dingdan-txt'>进入活动</view>
+  </view>
+
+  </view>
+  
+<!--分割线-->
+<view class="divLine"></view>
+</scroll-view>

@@ -1,0 +1,285 @@
+/* pages/userPage/myOrder/specificOrder/specificOrder.wxss */
+
+
+.background{
+  width: 100%;
+  height: 200rpx;
+  background: linear-gradient(to right,#566AFF,#38C5FF);
+}
+.background .information{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50rpx;
+  padding-top: 30rpx;
+}
+.background .waiting{
+  color: white;
+  font-size: 40rpx;
+
+}
+
+.background .waitingTime{
+  color: white;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}
+
+.finishing{
+  color: white;
+  font-size: 40rpx;
+  line-height: 170rpx;
+}
+
+.item {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 450rpx;
+  border-radius: 18rpx;
+}
+
+.itemhead{
+  font-size: 30rpx;
+  height: 80rpx;
+  width: 100%;
+  display:flex;
+  flex-direction: row; 
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+}
+
+.itemhead .object{
+  width: 70%;
+}
+
+.itemhead .type{
+  color: #4074dd;
+  line-height: 50rpx;
+}
+
+.object{
+  display: flex;
+  flex-direction: row;
+}
+.object image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.object .name{
+  margin-left: 20rpx;
+  line-height: 50rpx;
+}
+
+.content image{
+  width: 320rpx;
+  height: 240rpx;
+  border-radius: 18rpx;
+  margin: 30rpx;
+  margin-top: 0rpx;
+}
+.content .detail{
+  font-size: 30rpx;
+  margin-top: 0rpx;
+  margin-left: 20rpx;
+}
+
+.detail .name,.type,.price{
+  margin-bottom: 30rpx;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.itembottom{
+  display: flex;
+  flex-direction: row;
+  font-size: 27rpx;
+  color: #4074dd;
+  width: 100%;
+}
+
+.itembottom .datetitle{
+  margin: 30rpx;
+  margin-top: 0rpx;
+}
+.itembottom .date{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  
+}
+
+.itembottom .date{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  
+}
+
+.itembottom .datewithoutTime{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  width: 270rpx;
+}
+
+
+.itembottom .time{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  width: 110rpx;
+}
+
+
+.background2{
+  width: 100%;
+  height: 100rpx;
+  background: linear-gradient(to right,#566AFF,#38C5FF);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.item1,.item2,.item3{
+  line-height: 100rpx;
+  font-size: 35rpx;
+  color: white;
+}
+
+.item2{
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+}
+
+
+.countPrice{
+  border-bottom: #f2f2f2;
+  border-width: 1rpx;
+  border-bottom-style: solid;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20rpx;
+
+}
+
+.countPrice .priceitem{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #979797;
+  line-height: 50rpx;
+}
+
+.countPrice .itemname{
+  width: 45%;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.countPrice .number{
+  text-align: right;
+  width: 45%;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.count{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.countname{
+  width: 45%;
+  height: 50rpx;
+  font-size: 40rpx;
+  line-height: 50rpx;
+}
+
+.count .number{
+  text-align: right;
+  width: 45%;
+  height: 50rpx;
+  font-size: 40rpx;
+  color: #4074dd;
+  line-height: 50rpx;
+}
+
+
+
+.note{
+  border-bottom: #f2f2f2;
+  border-width: 1rpx;
+  border-bottom-style: solid;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+
+.note .noteitem{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  color: #979797;
+  line-height: 50rpx;
+  margin-left: 30rpx;
+}
+
+.note .itemname{
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.note .itemcontent{
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  color: black;
+}
+
+
+.button{
+  position: fixed;
+  right: 200rpx;
+  bottom: 0;
+  margin: 32px;
+}
+
+.button2{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  margin: 32px;
+}
+
+.button3{
+  position: fixed;
+  right: 400rpx;
+  bottom: 0;
+  box-sizing: border-box;
+  margin: 32px;
+}

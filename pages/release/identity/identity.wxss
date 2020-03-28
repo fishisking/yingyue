@@ -1,0 +1,25 @@
+/* pages/release/identity/identity.wxss */
+.type{
+  margin-left: 54rpx;
+  margin-right: 54rpx;
+  padding-top: 32rpx;
+  padding-bottom: 32rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.type .text{
+  display: flex;
+  align-items: center;
+  font-size:32rpx;
+}
+.type .selectedImage{
+  display: flex;
+  align-items: center;
+}
+.type .selectedImage image{
+  width: 50rpx;
+  height: 38rpx;
+}

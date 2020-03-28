@@ -1,0 +1,13 @@
+
+<view class='nav' style='height:{{navH}}px'>
+  <view class='title_icon'>
+    <image src='4.png' mode='aspectFit' class='back' bindtap='navBack'></image>
+    <view></view>
+    <image src='3.png' mode='aspectFit' class='home' bindtap='navHome'></image>
+  </view>
+
+  <view class='title_text'>{{pageTitle}}</view>
+</view>
+<!--正文-->
+<view class="container" style="margin-top: {{navH}}px">
+</view>

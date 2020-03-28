@@ -1,0 +1,32 @@
+<!--pages/message/Myconcern/myconcern.wxml-->
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="我关注的"></top-bar >
+<!--分割线-->
+<view class="divLine"></view>
+<scroll-view scroll-y="true"  style='height:{{screenHeight*px2rpx+400}}rpx;'>
+  <view class='concern-item'>
+    <view class='content'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/KW7bqNccTCbR.VAfibjMVk.t73X1teroSRHIc64w4MA!/b/dL8AAAAAAAAA&bo=5AHkAQAAAAADJwI!&rf=viewer_4'></image>
+    </view>
+    <view class='txt'>
+      <view class='name'><text>许文豪</text></view>
+      <view class='operator'><text>发布了新作品</text> <text class='lasttime'>1小时前</text></view>
+    </view>
+    <view class='pic'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/teBvLGFzpEU5WTwqjNX3WIZOSKwS8dwOqG*IhPB3Ry8!/b/dMUAAAAAAAAA&bo=SwPVAQAAAAADR*4!&rf=viewer_4' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class="divLine"></view>
+  <view class='concern-item'>
+    <view class='content'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/qCcTrvBXkMH2Nk2UtdzZh4BrrfBksbCwuKfbFHEI2Qw!/b/dLgAAAAAAAAA&bo=4wHkAQAAAAADJwU!&rf=viewer_4'></image>
+    </view>
+    <view class='txt'>
+      <view class='name'><text>许文豪</text></view>
+      <view class='operator'><text>发布了新作品</text> <text class='lasttime'>2小时前</text></view>
+    </view>
+    <view class='pic'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/rYKLdHoemV2lonElr3jvwT4zMfYDPAe9d8XS2pVMjtQ!/b/dMAAAAAAAAAA&bo=egk4BAAAAAADdx0!&rf=viewer_4' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class="divLine"></view>
+</scroll-view>

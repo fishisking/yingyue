@@ -1,0 +1,71 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="选择日期"></top-bar >
+<scroll-view scroll-y class='scroll-view' style='height:1200rpx;'>
+  <view class='calendar'>
+  <!--星期-->
+    <view class='week'>
+      <text class='saturday'>日</text>
+      <text>一</text>
+      <text>二</text>
+      <text>三</text>
+      <text>四</text>
+      <text>五</text>
+      <text class='sunday'>六</text>
+    </view>
+    
+  <!--年月-->
+    <view class='year_month'>
+    <!--提示-->
+      <view class='tips'>
+        <text>●</text>
+        <text>灰色表示约满或不可约</text>
+      </view>
+      <text class='month'>{{thisMonth}}月</text>
+      <text class='year'>{{thisYear}}</text>
+    </view>
+    
+    <block wx:for="{{thisMonthArr}}" wx:key="index">
+    <view class='week'>
+        <text class="saturday {{item[0]['isToday'] == true ? 'now' : ''}} {{item[0]['date'] < today ? 'disabled' : ''}} {{item[0]['state']==true?'selected':''}}" data-month='thisMonth' data-date="{{item[0]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+        <text class="{{item[1]['isToday'] == true ? 'now' : ''}} {{item[1]['date'] < today ? 'disabled' : ''}} {{item[1]['state']==true?'selected':''}}" data-month='thisMonth' data-date="{{item[1]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='1' bindtap="select_date">{{item[1]['date']}}</text>
+        <text class="{{item[2]['isToday'] == true ? 'now' : ''}} {{item[2]['date'] < today ? 'disabled' : ''}} {{item[2]['state']==true?'selected':''}}" data-month='thisMonth' data-date="{{item[2]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='2' bindtap="select_date">{{item[2]['date']}}</text>
+        <text class="{{item[3]['isToday'] == true ? 'now' : ''}} {{item[3]['date'] < today ? 'disabled' : ''}} {{item[3]['state']==true?'selected':''}}" data-month='thisMonth' data-date="{{item[3]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='3' bindtap="select_date">{{item[3]['date']}}</text>
+        <text class="{{item[4]['isToday'] == true ? 'now' : ''}} {{item[4]['date'] < today ? 'disabled' : ''}} {{item[4]['state']==true?'selected':''}}" data-month='thisMonth' data-date="{{item[4]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='4' bindtap="select_date">{{item[4]['date']}}</text>
+        <text class="{{item[5]['isToday'] == true ? 'now' : ''}} {{item[5]['date'] < today ? 'disabled' : ''}} {{item[5]['state']==true?'selected':''}}" data-month='thisMonth' data-date="{{item[5]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='5' bindtap="select_date">{{item[5]['date']}}</text>
+        <text class="sunday {{item[6]['isToday'] == true ? 'now' : ''}} {{item[6]['date'] < today ? 'disabled' : ''}} {{item[6]['state']==true?'selected':''}}" data-month='thisMonth' data-date="{{item[6]['date'] < today ? '' :item[0]['date']}}" data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text> 
+    </view>
+    </block>
+  </view>
+<!--第二部分-->
+  <view class='calendar'>
+    <view class='year_month'>
+      <text class='month'>{{nextMonth}}月</text>
+      <text class='year'>{{nextYear}}</text>
+    </view>
+    <block wx:for="{{nextMonthArr}}" wx:key="index">
+    <view class='week'>
+        <text class="saturday {{item[0]['state']==true?'selected':''}}" data-date="{{item[0]['date']}}" data-key='{{index}}' data-keyitem='0' bindtap="select_date">{{item[0]['date']}}</text>
+        <text class="{{item[1]['state']==true?'selected':''}}" data-date="{{item[1]['date']}}" data-key='{{index}}' data-keyitem='1' bindtap="select_date">{{item[1]['date']}}</text>
+        <text class="{{item[2]['state']==true?'selected':''}}" data-date="{{item[2]['date']}}" data-key='{{index}}' data-keyitem='2' bindtap="select_date">{{item[2]['date']}}</text>
+        <text class="{{item[3]['state']==true?'selected':''}}" data-date="{{item[3]['date']}}" data-key='{{index}}' data-keyitem='3' bindtap="select_date">{{item[3]['date']}}</text>
+        <text class="{{item[4]['state']==true?'selected':''}}" data-date="{{item[4]['date']}}" data-key='{{index}}' data-keyitem='4' bindtap="select_date">{{item[4]['date']}}</text>
+        <text class="{{item[5]['state']==true?'selected':''}}" data-date="{{item[5]['date']}}" data-key='{{index}}' data-keyitem='5' bindtap="select_date">{{item[5]['date']}}</text>
+        <text class="sunday {{item[6]['state']==true?'selected':''}}" data-date="{{item[6]['date']}}" data-key='{{index}}' data-keyitem='6' bindtap="select_date">{{item[6]['date']}}</text> 
+    </view>
+    </block>
+  </view>
+
+<!--底部消息提示框-->
+<view class="alarm">
+  <text>最早可预约日为当日，可预约时间为未来30天</text>
+</view>
+
+</scroll-view>
+
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}" bindtap='goToTime'>
+  <view class="tab-content">
+    <view class='confirm'>
+      <text>确定</text>
+    </view>
+  </view> 
+</view>

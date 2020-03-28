@@ -1,0 +1,7 @@
+<top-bar navH="{{navH}}" pageTitle="作品摄影师"></top-bar>
+<view class="search">
+<view class="searchfield">
+  <image src="images/search.png" class="search-icon"></image>
+  <input placeholder='搜索昵称'></input>
+</view>
+</view>

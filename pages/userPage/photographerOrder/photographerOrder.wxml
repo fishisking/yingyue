@@ -1,0 +1,222 @@
+<!--pages/userPage/photographerOrder/photographerOrder.wxml-->
+<top-bar navH="{{navH}}" pageTitle="我的订单"></top-bar>
+
+
+
+<van-tabs active="{{pagenum}}" bind:change="onChange">
+    <van-tab
+      title="全部"
+    >
+    <!--单个tab内容-->
+      <!--单个项目-->
+      <!--全部-->
+      <view class='contain'>
+        <view class='item' wx:for="{{orderList}}" wx:key="unique">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class='itembottom'>
+            <view class='datetitle'>拍摄时间</view>
+            <view class="date{{item.time==null?'withoutTime':''}}">{{item.date}}</view>
+            <view class='time' wx:if='{{item.time}}'>{{item.time}}</view>
+            <van-button type="info" size="mini" plain hairline round>取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <!--待回复-->
+    <van-tab
+      title="待回复"
+      info="{{replyInfo}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待回复'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class='itembottom'>
+            <view class='datetitle'>拍摄时间</view>
+            <view class="date{{item.time==null?'withoutTime':''}}">{{item.date}}</view>
+            <view class='time' wx:if='{{item.time}}'>{{item.time}}</view>
+            <van-button type="info" size="mini" plain hairline round>取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+
+    <van-tab
+      title="待拍摄"
+      info="{{takingpictureInfo}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待拍摄'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class='itembottom'>
+            <view class='datetitle'>拍摄时间</view>
+            <view class="date{{item.time==null?'withoutTime':''}}">{{item.date}}</view>
+            <view class='time' wx:if='{{item.time}}'>{{item.time}}</view>
+            <van-button type="info" size="mini" plain hairline round>取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+
+
+    <van-tab
+      title="待交片"
+      info="{{handingpictureInfo}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待交片'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class='itembottom'>
+            <view class='datetitle'>拍摄时间</view>
+            <view class="date{{item.time==null?'withoutTime':''}}">{{item.date}}</view>
+            <view class='time' wx:if='{{item.time}}'>{{item.time}}</view>
+            <van-button type="info" size="mini" plain hairline round>取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab
+      title="待反馈"
+      info="{{feedbackInfo}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待反馈'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class='itembottom'>
+            <view class='datetitle'>拍摄时间</view>
+            <view class="date{{item.time==null?'withoutTime':''}}">{{item.date}}</view>
+            <view class='time' wx:if='{{item.time}}'>{{item.time}}</view>
+            <van-button type="info" size="mini" plain hairline round>删除订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab
+      title="售后"
+      info="{{payInfo}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='售后'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class='itembottom'>
+            <view class='datetitle'>拍摄时间</view>
+            <view class="date{{item.time==null?'withoutTime':''}}">{{item.date}}</view>
+            <view class='time' wx:if='{{item.time}}'>{{item.time}}</view>
+            <van-button type="info" size="mini" plain hairline round>取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>

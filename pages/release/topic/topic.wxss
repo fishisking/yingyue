@@ -1,0 +1,103 @@
+/* pages/release/topic/topic.wxss */
+/*搜索框*/
+.search{
+  padding: 54rpx 44rpx 0rpx 54rpx;
+}
+.searchfield{
+  flex-direction: row;
+  display: flex;
+  border: 2rpx solid #f7f7f7;
+  border-radius: 36rpx;
+  height: 64rpx;
+  padding:14rpx 0 0 0;
+  font-size:32rpx;
+  background-color: #f7f7f7;
+}
+.search-icon{
+  margin-left: 210rpx;
+  margin-right: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/*最近使用框*/
+.use{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+  padding:38rpx 0 38rpx 0;
+  font-size: 32rpx;
+}
+.use image{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+/*内容12*/
+.recenty{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.recenty .text1{
+  flex-direction: row;
+  display: flex;
+  border: 2rpx solid #f7f7f7;
+  border-radius: 36rpx;
+  margin-bottom: 38rpx;
+  font-size: 32rpx;
+  width: 300rpx;
+  height: 60rpx;
+  padding:14rpx 0 0 0;
+  background-color: #f7f7f7;
+}
+.recenty .text2{
+  flex-direction: row;
+  display: flex;
+  border: 2rpx solid #f7f7f7;
+  border-radius: 36rpx;
+  margin-bottom: 38rpx;
+  font-size: 32rpx;
+  width: 340rpx;
+  height: 60rpx;
+  padding:14rpx 0 0 0;
+  background-color: #f7f7f7;
+}
+.recenty-icon{
+  margin-left: 40rpx;
+  margin-right: 10rpx;
+  margin-top: 8rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+/*内容3*/
+.recenty2{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.recenty2 .text3{
+  flex-direction: row;
+  display: flex;
+  border: 2rpx solid #f7f7f7;
+  border-radius: 36rpx;
+  margin-bottom: 38rpx;
+  font-size: 32rpx;
+  width: 240rpx;
+  height: 60rpx;
+  padding:14rpx 0 0 0;
+  background-color: #f7f7f7;
+}
+/*选择*/
+.choose{
+  margin-left: 34rpx;
+  margin-right: 34rpx;
+  padding:38rpx 0 38rpx 0;
+  border-bottom: 2rpx solid #f2f2f2;
+  font-size: 36rpx;
+}
+.choose image{
+  width: 30rpx;
+  height: 30rpx;
+}

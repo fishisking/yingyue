@@ -1,0 +1,19 @@
+<!--pages/userPage/userBox/setting/setting.wxml-->
+<top-bar navH="{{navH}}" pageTitle="设置"></top-bar>
+<view class='contain'>
+  <view class='item'>
+    <view class='itemTitle'>条款与政策</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+  <view class='item'>
+    <view class='itemTitle'>帮助中心</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+  <view class='item'>
+    <view class='itemTitle'>意见反馈</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+  <view class='buttonitem'>
+  <view class='button'>切换账号</view>
+  </view>
+</view>

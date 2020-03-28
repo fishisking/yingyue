@@ -1,0 +1,34 @@
+<!--pages/userPage/userBox/watermark/watermark.wxml-->
+<top-bar navH="{{navH}}" pageTitle="个性水印"></top-bar>
+<view class='contain'>
+  <view class='item'>
+    <view class='itemTitle'>水印位置</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+  <view class='item'>
+    <view class='itemTitle'>水印内容</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+
+  <view class='uploadlogo' hidden='true'>
+    <image class='upload' src='./icon/logo.png'></image>
+  </view>
+
+
+  <view class='item'>
+    <view class='itemTitle'>文字内容</view>
+
+    <van-field value="{{ value }}" placeholder="请输入水印文字" border="{{ false }}" clearable />
+      
+  </view>
+
+  <view class='item'>
+    <view class='itemTitle'>水印字体</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+
+  <view class='item'>
+    <view class='itemTitle'>字体颜色</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+</view>

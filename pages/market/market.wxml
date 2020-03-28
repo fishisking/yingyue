@@ -1,0 +1,307 @@
+<!--顶部搜索框-->
+<view class="navBar" style="padding-top:{{statusBarHeight*px2rpx}}rpx">
+  <view class='flex-row'>
+    <view class="location">杭州
+    <image src="images/down.png"></image>
+    </view>
+  <view class="searchfield" bindtap='goTosearch'>
+    <image src="images/search.png" class="search-icon"></image>
+    <input placeholder='搜索影约内容'></input>
+  </view>
+  </view>
+</view>
+
+<!--switch切换栏-->
+<view class='selectTab' style='padding-top:{{(navBarHeight+12)*px2rpx}}rpx' catchtouchmove="ture">
+  <view class='flex-row'>
+    <view class="Photographer {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    摄影师
+    </view>
+    <view class="place {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+    摄影机构
+    </view>
+    <view class="service {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+    相关服务
+    </view>
+  </view>
+    <view class='onTabLine' style="margin-left:{{65+currentTab*250}}rpx"></view>
+    <view class='line'></view>
+</view>
+
+<!--筛选服务框-->
+<view  class="selectbody" style='padding-top:{{(navBarHeight+55)*px2rpx}}rpx' catchtouchmove='true'>
+  <view class='flex-row'>
+    <view class="synthesize {{currentSelTab==0?'active':''}}" data-selcurrent="0" bindtap="clickSelTab">
+    综合
+    <image src="images/tub.png"></image>
+    </view>
+    <view class="feedback {{currentSelTab==1?'active':''}}" data-selcurrent="1" bindtap="clickSelTab">
+    反馈分
+    </view>
+    <view class="deal {{currentSelTab==2?'active':''}}" data-selcurrent="2" bindtap="clickSelTab" >
+    成交数<text decode="{{true}}">&nbsp;&nbsp;</text>丨
+    </view>
+    <view class="screen {{currentSelTab==3?'active':''}}" data-selcurrent="3" bindtap="clickSelTab">
+    <text decode="{{true}}">&nbsp;&nbsp;</text>筛选
+    </view>
+  </view>
+</view>
+
+<!--内容框-->
+<!--摄影师-->
+<scroll-view scroll-y="true" class="user-content" style="padding-top:{{(navBarHeight+88)*px2rpx}}rpx;height:1200rpx;overflow-y:hidden" wx:if="{{currentTab==0}}">
+  <view class="user" bindtap='goToContentPage'>
+    <view class='head'>
+    <image src="https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/PfvkuL5bB0cjw2JLkzQM7rvZhtrX5BH3rS*velu7iEY!/b/dIQAAAAAAAAA&bo=5AHkAQAAAAADByI!&rf=viewer_4"></image>
+    </view>
+    <view class="details">
+    <text class="name">许文豪</text>
+    <image src='images/pboy.png' mode="aspectFit"></image>
+    <text class="byear">28岁</text>
+    </view>
+    <view class="grades">
+    <text>5.0</text>
+    </view>
+    <view class="type">
+    <text class="typec" decode="{{true}}">&nbsp;清新&nbsp;</text>
+    <text class="typec" decode="{{true}}">&nbsp;复古&nbsp;</text>
+    <view class="taken">
+    <text class="nums">18人约拍过</text>
+    <image src="images/right.png"></image>
+    </view>
+    </view>
+  </view>
+<!--示例用户2-->
+  <view class="user" bindtap='goToContentPage'>
+    <view class='head'>
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/ejkCgzqhsDaxFbV6cwhBChSXXJrMtSfnD7KDIaRwiMA!/b/dFYBAAAAAAAA&bo=4wHkAQAAAAADJwU!&rf=viewer_4"></image>
+    </view>
+    <view class="details">
+    <text class="name">吴承聪</text>
+    <image src='images/pboy.png' mode="aspectFit"></image>
+    <text class="byear">21岁</text>
+    </view>
+    <view class="grades">
+    <text>5.0</text>
+    </view>
+    <view class="type">
+    <text class="typec" decode="{{true}}">&nbsp;婚纱照&nbsp;</text>
+    <!-- <text class="typec">婚礼跟拍</text> -->
+    <view class="taken">
+    <text class="nums">14人约拍过</text>
+    <image src="images/right.png"></image>
+    </view>
+    </view>
+  </view>
+  <!--展示用户3-->
+  <view class="user" bindtap='goToContentPage'>
+    <view class='head'>
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/2XRXuXV6LKA68qDGI20.MlgYpBEohT7Zms40RziHcRA!/b/dL4AAAAAAAAA&bo=sQKxAgAAAAADNxI!&rf=viewer_4"></image>
+    </view>
+    <view class="details">
+    <text class="name">韦闻韬</text>
+    <image src='images/pboy.png' mode="aspectFit"></image>
+    <text class="byear">23岁</text>
+    </view>
+    <view class="grades">
+    <text>5.0</text>
+    </view>
+    <view class="type">
+    <text class="typec" decode="{{true}}">&nbsp;私房&nbsp;</text>
+    <text class="typec" decode="{{true}}">&nbsp;复古&nbsp;</text>
+    <view class="taken">
+    <text class="nums">15人约拍过</text>
+    <image src="images/right.png"></image>
+    </view>
+    </view>
+  </view>
+  
+  <view class="user" bindtap='goToContentPage'>
+    <view class='head'>
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/2XRXuXV6LKA68qDGI20.MlgYpBEohT7Zms40RziHcRA!/b/dL4AAAAAAAAA&bo=sQKxAgAAAAADNxI!&rf=viewer_4"></image>
+    </view>
+    <view class="details">
+    <text class="name">韦闻韬</text>
+    <image src='images/girl.png' mode="aspectFit"></image>
+    <text class="gyear">23岁</text>
+    </view>
+    <view class="grades">
+    <text>5.0</text>
+    </view>
+    <view class="type">
+    <text class="typec" decode="{{true}}">&nbsp;私房&nbsp;</text>
+    <text class="typec" decode="{{true}}">&nbsp;复古&nbsp;</text>
+    <view class="taken">
+    <text class="nums">15人约拍过</text>
+    <image src="images/right.png"></image>
+    </view>
+    </view>
+  </view>
+  <view class="user" bindtap='goToContentPage'>
+    <view class='head'>
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/2XRXuXV6LKA68qDGI20.MlgYpBEohT7Zms40RziHcRA!/b/dL4AAAAAAAAA&bo=sQKxAgAAAAADNxI!&rf=viewer_4"></image>
+    </view>
+    <view class="details">
+    <text class="name">韦闻韬</text>
+    <image src='images/girl.png' mode="aspectFit"></image>
+    <text class="gyear">23岁</text>
+    </view>
+    <view class="grades">
+    <text>5.0</text>
+    </view>
+    <view class="type">
+    <text class="typec" decode="{{true}}">&nbsp;私房&nbsp;</text>
+    <text class="typec" decode="{{true}}">&nbsp;复古&nbsp;</text>
+    <view class="taken">
+    <text class="nums">15人约拍过</text>
+    <image src="images/right.png"></image>
+    </view>
+    </view>
+  </view>
+  <view class="user" bindtap='goToContentPage'>
+    <view class='head'>
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/2XRXuXV6LKA68qDGI20.MlgYpBEohT7Zms40RziHcRA!/b/dL4AAAAAAAAA&bo=sQKxAgAAAAADNxI!&rf=viewer_4"></image>
+    </view>
+    <view class="details">
+    <text class="name">韦闻韬</text>
+    <image src='images/pboy.png'></image>
+    <text class="byear">23岁</text>
+    </view>
+    <view class="grades">
+    <text>5.0</text>
+    </view>
+    <view class="type">
+    <text class="typec" decode="{{true}}">&nbsp;私房&nbsp;</text>
+    <text class="typec" decode="{{true}}">&nbsp;复古&nbsp;</text>
+    <view class="taken">
+    <text class="nums">15人约拍过</text>
+    <image src="images/right.png"></image>
+    </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+
+<scroll-view scroll-y="true" class="Organ-content" style="padding-top:{{(navBarHeight+88)*px2rpx}}rpx;height:1200rpx;overflow-y:hidden" wx:elif="{{currentTab==1}}">
+  <!--机构1-->
+  <view class="organ" bindtap='goToOrganContentPage'>
+    <view class="organ-icon">
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/V6UAKw5*JjrS7JbyWzQln86RsRzKWNNoF.tG4BC*tyQ!/b/dL4AAAAAAAAA&bo=gAc4BAAAAAARF5s!&rf=viewer_4"></image>
+    </view>
+    <view class="organ-content">
+    <text class="organ-name">海马体</text>
+    <text class="organ-place">(湖滨银泰店)</text>
+    <view class="organ-type">
+      <text class="typec" decode="{{true}}">&nbsp;证件照&nbsp;</text>
+      <text class="typec" decode="{{true}}">&nbsp;文艺照&nbsp;</text>
+    </view>
+    <view class="other">
+    <text class="grade">5.0</text>
+    <view class="other-colum">
+    <text class="distance">距离您2.7km</text>
+    <text class="numbers">1856人约拍过</text>
+    </view>
+    <image src='images/right.png'></image>     
+    </view>
+    </view>
+  </view>
+  <!--机构2-->
+  <view class="organ">
+    <view class="organ-icon">
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/ueAUqxFVHnDaPSSv*NnApclumpnCSqe8SNVwccPYVxI!/b/dFQBAAAAAAAA&bo=YQcnBAAAAAARF2U!&rf=viewer_4"></image>
+    </view>
+    <view class="organ-content">
+    <text class="organ-name">天真蓝</text>
+    <text class="organ-place">(嘉里中心店)</text>
+    <view class="organ-type">
+      <text class="typec" decode="{{true}}">&nbsp;证件照&nbsp;</text>
+      <text class="typec" decode="{{true}}">&nbsp;文艺照&nbsp;</text>
+    </view>
+    <view class="other">
+    <text class="grade">5.0</text>
+    <view class="other-colum">
+    <text class="distance">距离您3.4km</text>
+    <text class="numbers">1456人约拍过</text>
+    </view>
+    <image src='images/right.png'></image>     
+    </view>
+    </view>
+  </view>
+   <!--机构3-->
+  <view class="organ">
+    <view class="organ-icon">
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/V6UAKw5*JjrS7JbyWzQln86RsRzKWNNoF.tG4BC*tyQ!/b/dL4AAAAAAAAA&bo=gAc4BAAAAAARF5s!&rf=viewer_4"></image>
+    </view>
+    <view class="organ-content">
+    <text class="organ-name">海马体</text>
+    <text class="organ-place">(银泰城店)</text>
+    <view class="organ-type">
+      <text class="typec" decode="{{true}}">&nbsp;证件照&nbsp;</text>
+      <text class="typec" decode="{{true}}">&nbsp;文艺照&nbsp;</text>
+    </view>
+    <view class="other">
+    <text class="grade">4.9</text>
+    <view class="other-colum">
+    <text class="distance">距离您5.7km</text>
+    <text class="numbers">3458人约拍过</text>
+    </view>
+    <image src='images/right.png'></image>     
+    </view>
+    </view>
+  </view>
+    <!--机构4-->
+    <view class="organ">
+    <view class="organ-icon">
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/V6UAKw5*JjrS7JbyWzQln86RsRzKWNNoF.tG4BC*tyQ!/b/dL4AAAAAAAAA&bo=gAc4BAAAAAARF5s!&rf=viewer_4"></image>
+    </view>
+    <view class="organ-content">
+    <text class="organ-name">海马体</text>
+    <text class="organ-place">(银泰城店)</text>
+    <view class="organ-type">
+      <text class="typec" decode="{{true}}">&nbsp;证件照&nbsp;</text>
+      <text class="typec" decode="{{true}}">&nbsp;文艺照&nbsp;</text>
+    </view>
+    <view class="other">
+    <text class="grade">4.9</text>
+    <view class="other-colum">
+    <text class="distance">距离您5.7km</text>
+    <text class="numbers">3458人约拍过</text>
+    </view>
+    <image src='images/right.png'></image>     
+    </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!--租赁1-->
+<scroll-view scroll-y="true" class="Lease-content" style="padding-top:{{(navBarHeight+88)*px2rpx}}rpx;height:1200rpx;overflow-y:hidden" wx:elif="{{currentTab==2}}">
+   <view class="lease" bindtap="goToServiceContentPage">
+    <view class="lease-icon">
+    <image src="http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/blfwPk0Xd6oDwcqnGa8yffVgJ.J2MIvlmh87QxtqE9A!/b/dLsAAAAAAAAA&bo=6AMzAgAAAAARF*o!&rf=viewer_4"></image>
+    </view>
+    <view class="lease-content">
+    <text class="lease-name">专业相机租赁</text>
+    <text class="lease-place">(银泰城店)</text>
+    <view class="lease-type">
+      <text class="typec" decode="{{true}}">&nbsp;器材租赁&nbsp;</text>
+      <!-- <text class="typec" decode="{{true}}">&nbsp;文艺照&nbsp;</text> -->
+    </view>
+    <view class="other">
+    <text class="grade">5.0</text>
+    <view class="other-colum">
+    <text class="distance">距离您5.7km</text>
+    <text class="numbers">3458人租赁过</text>
+    </view>
+    <image src='images/right.png'></image>     
+    </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<tabbar tabbar="{{tabbar}}"></tabbar>
+
+
+
+

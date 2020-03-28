@@ -1,0 +1,101 @@
+
+.avator{
+  width: 116rpx;
+  height: 100rpx;
+  margin: 64rpx 18rpx 0 24rpx;
+  border-radius: 80rpx;
+}
+.container1{
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+.comment-area{
+  width:100%;
+}
+.like-icon{
+  height: 36rpx;
+  width: 36rpx;
+
+}
+.like-icon-area{
+  display: flex;
+  flex-direction: row;
+}
+.date-time{
+  display: flex;
+  flex-direction: row;
+  color:#cdcdcd;
+  font-size: 24rpx;
+  margin-top:10rpx;
+  margin-bottom: 14rpx;
+}
+.date{
+  margin-right:20rpx;
+}
+.row-flex{
+  display: flex;
+  flex-direction: row;
+}
+.column-flex{
+  display: flex;
+  flex-direction: column;
+}
+.comment-area-header{
+  margin-top:80rpx;
+}
+.comment-area-header-left{
+  width:80%;
+}
+.like-icon-area{
+  float:right;
+}
+.like-icon{
+  margin-right:6rpx;
+}
+.content{
+  font-size:30rpx; 
+  margin-bottom:30rpx;
+}
+.id{
+  font-size:30rpx; 
+  font-weight: bold;
+}
+.line{
+  width: 100%;
+  height: 2rpx;
+  background-color: #cdcdcd;
+  margin: 0rpx auto 0 auto;
+}
+.response{
+  background:  #f2f2f2;
+}
+.express-comment-area{
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 112rpx;
+
+}
+.searchfield{
+  height: 64rpx;
+  margin: 24rpx 44rpx;
+}
+.placeholder{
+  font-size: 26rpx;
+  color:#cdcdcd;
+  border: 2rpx solid #cdcdcd;
+  padding:6rpx 0rpx 6rpx 20rpx;
+  border-radius: 24rpx;
+  width: 80%;
+}
+.send-button{
+  font-size:32rpx;
+  color:#4074dd;
+  margin-left:4%;
+  margin-top:6rpx;
+}
+.express-comment-area.iphoneX-height{
+    padding-bottom: 30rpx;
+}

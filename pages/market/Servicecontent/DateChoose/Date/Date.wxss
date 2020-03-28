@@ -1,0 +1,127 @@
+/*时间选择*/
+.calendar {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.calendar .week {
+  width: 98%;
+  margin: 0 auto;
+  height: auto;
+  overflow: hidden;
+}
+/*提示*/
+.tips{
+  /* margin-top: 20rpx; */
+  width: 100%;
+  /* display: flex; */
+  /* flex-direction: row;  */
+  text-align: right;
+}
+.tips text{
+  margin-left: -30rpx;
+  font-size: 30rpx;
+  color: #888888;
+  font-weight: 500rpx;
+  margin-right: 22px;
+}
+/*年月*/
+.calendar .year_month{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  margin-top: 20rpx;
+  /* height: 120rpx; */
+  /* line-height: 120rpx; */
+  /* border-top: #E6E6E6 1px solid; */
+}
+.calendar .year_month .year{
+  color: #93b4f8;
+  font-size: 38rpx;
+  padding-left: 45rpx;
+}
+.calendar .year_month .month{
+  color: #4074dd;
+  font-size: 80rpx;
+  padding-left: 40rpx;
+}
+
+.calendar .week text{
+  width: 14%;
+  margin: 0 auto;
+  text-align: center;
+  height: 100rpx;
+  font-size: 36rpx;
+  display: flex;
+  float: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #FFFFFF 1px solid;
+}
+/* .calendar .week .saturday {
+  color: #E64340;
+}
+.calendar .week .sunday {
+  color: #10AEFF;
+} */
+.calendar .week .now {
+  border:none;
+  border-bottom: #E64340 1px solid;
+  background: #FFFFFF;
+  border-radius: 0;
+}
+.calendar .week .selected {
+  border:none;
+  background: #F6D451;
+  border-bottom: #F6D451 1px solid;
+  border-radius: 30rpx;
+  color: #FFFFFF;
+}
+.calendar .week .disabled {
+  border:none;
+  background: #FFFFFF;
+  border-bottom: #FFFFFF 1px solid;
+  color: #888888;
+}
+
+
+/*底部提示框alarm*/
+.alarm{
+  width: 100%;
+  font-size: 30rpx;
+  text-align: center;
+  color: #cdcdcd;
+  color: 40rpx;
+  border-top: #cdcdcd 1px solid;
+  line-height: 60rpx;
+}
+/*底部导航*/
+/*确定*/
+.bottom-tab{
+  bottom:0;
+  height: 118rpx;
+  width: 100%;
+  background: linear-gradient(to right, #5594ff , #3bc3ff);
+  position: fixed;
+  z-index: 9999;
+}
+.bottom-tab.iphoneX-height{
+    padding-bottom: 20rpx;
+}
+.tab-content{
+  flex-direction: row;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+    font-size: 60rpx;
+}
+.confirm{ 
+  color: #ffffff;
+  font-size: 36rpx;
+  margin-top: 30rpx;
+  align-content: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,167 @@
+/*头部标签*/
+.User-content{
+  display: flex;
+}
+/*头部背景图片*/
+.header-background{
+  width: 100%;
+  height: 420rpx;
+}
+.header-pic{
+  width: 100%;
+  height: 420rpx;
+  z-index: 1;
+}
+/*用户信息样式*/
+.flex-row{
+  flex-direction: row;
+  display: flex;
+}
+.header-icon{
+  display: flex;           
+  justify-content: center;
+  z-index: 1;   
+}
+.header-icon image{
+  margin-top: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 80rpx; 
+}
+.user-info{
+  display: flex;           
+  justify-content: center;
+  z-index: 1; 
+}
+.user-info .user-name{
+  margin-top: 16rpx;
+  font-size: 40rpx;
+  color:#303030;
+  font-weight: 500;
+}
+
+/*个性签名*/
+.autograph{
+  display: flex;           
+  justify-content: center;
+  color: #8c8c8c;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+/*粉丝、反馈分、信用分、*/
+.details{
+  flex-direction: row;
+  display: flex;
+  margin-top: 16rpx;
+  align-items: center;
+  justify-content: center;
+}
+.details .cut{
+  width: 2rpx;
+  height: 32rpx;
+  background-color: #f2f2f2;
+  margin-top: 44rpx;
+}
+.details .nums{
+  font-size: 32rpx;
+  color: #303030;
+  text-align: center;
+}
+.details .location{
+  font-size: 32rpx;
+  color: #303030;
+  text-align: center;
+}
+.details .name{
+  font-size: 24rpx;
+  color: #8c8c8c;
+  text-align: center;
+}
+.fans{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 30rpx;
+  margin-right: 50rpx;
+}
+.feedback{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+} 
+.credit{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 50rpx;
+  margin-right: 31rpx;
+} 
+/*作品*/
+.selectTab{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.onTabLine{
+  width: 100rpx;
+  height: 5rpx;
+  background-color:#5594ff;
+  margin-top:15rpx;
+}
+.works{
+  font-size: 36rpx;
+  color:#aeaeae;
+  width: 100%;
+  text-align: center;
+  margin-top: 48rpx;
+}
+.active{
+  color:#5594ff;
+}
+
+/*作品中图片的展示*/
+.images-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20rpx 54rpx 20rpx 54rpx;
+}
+.show-list image{
+  margin-top: 30rpx;
+  width: 630rpx;
+  height: 280rpx;
+  box-shadow: 4rpx 6rpx 6rpx #CDCDCD;
+  background: #aeaeae;
+  border-radius: 20rpx;
+  position: relative;
+} 
+/*底部导航*/
+/*关注*/
+.bottom-tab{
+  bottom:0;
+  height: 118rpx;
+  width: 100%;
+  background: linear-gradient(to right, #5594ff , #3bc3ff);
+  position: fixed;
+  z-index: 9999;
+}
+.bottom-tab.iphoneX-height{
+    padding-bottom: 20rpx;
+}
+.tab-content{
+  flex-direction: row;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+}
+.viewer{ 
+  color: #ffffff;
+  font-size: 36rpx;
+  margin-top: 30rpx;
+  align-content: center;
+  justify-content: center;
+}
+

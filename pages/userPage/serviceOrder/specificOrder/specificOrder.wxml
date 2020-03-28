@@ -1,0 +1,126 @@
+<!--pages/userPage/serviceOrder/specificOrder/specificOrder.wxml-->
+<!--pages/userPage/myOrder/specificOrder/specificOrder.wxml-->
+<top-bar navH="{{navH}}" pageTitle="订单详情"></top-bar>
+
+
+
+<view class='background'>
+  <view class='information' wx:if="{{order.status=='待付款'}}">
+    <view class='waiting' >等待付款</view>
+    <view class='waitingTime'>剩余23小时59分自动取消</view>
+  </view>
+
+  <view class='information' wx:if="{{order.status=='待回复'}}">
+    <view class='waiting'>等待回复</view>
+    <view class='waitingTime'>剩余23小时59分自动取消</view>
+  </view>
+
+  <view class='information' wx:if="{{order.status=='待拍摄'}}">
+    <view class='waiting'>等待拍摄</view>
+    <view class='waitingTime'>拍摄时间 2019-05-24 16:00</view>
+  </view>
+
+  <view class='information' wx:if="{{order.status=='待取片'}}">
+    <view class='waiting'>等待取片</view>
+    <view class='waitingTime'>剩余23小时59分交片</view>
+  </view>
+
+  <view class='information' wx:if="{{order.status=='可取片'}}">
+    <view class='finishing'>商家已完成,请联系前往取片</view>
+  </view>
+
+  <view class='information' wx:if="{{order.status=='待反馈'}}">
+    <view class='waiting'>等待反馈</view>
+    <view class='waitingTime'>剩余6天23小时59分可反馈</view>
+  </view>
+
+  <view class='information' wx:if="{{order.status=='反馈结束'}}">
+    <view class='finishing'>反馈已结束</view>
+  </view>
+
+</view>
+
+      <view class='contain'>
+        <view class='item' >
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{order.objecthead}}'></image>
+              <view class='name'>{{order.objectname}}</view>
+            </view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{order.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{order.ordername}}</view>
+              <view class='type'>{{order.style}}</view>
+              <view class='price'>￥{{order.price}}</view>
+            </view>
+          </view>
+        
+          <view class='itembottom'>
+            <view class='datetitle'>拍摄时间</view>
+            <view class="date{{order.time==null?'withoutTime':''}}">{{order.date}}</view>
+            <view class='time' wx:if='{{order.time}}'>{{order.time}}</view>
+          </view>
+        </view>
+      </view>
+
+
+
+  <view class='background2'>
+    <view class='item1' wx:if="{{order.status!='待回复'}}">拍摄地址</view>
+    <view class='item2'>服务内容</view>
+    <view class='item3'>联系商家</view>
+  </view>
+
+  <view class='countPrice'>
+    <view class='priceitem'>
+      <view class='itemname'>商品总价</view>
+      <view class='number'>￥{{order.price}}</view>
+    </view>
+    <view class='priceitem'>
+      <view class='itemname'>优惠</view>
+      <view class='number'>-￥0</view>
+    </view>
+
+    <view class='count'>
+      <view class='countname'>需付款</view>
+      <view class='number'>￥{{order.price}}</view>
+    </view>
+  </view>
+
+  <view class='note'  wx:if="{{order.status!='待付款'&&order.status!='待回复'}}">
+    <view class='noteitem'>
+      <view class='itemname'>订单编号:</view>
+      <view class='itemcontent'>0568711231</view>
+    </view>
+    <view class='noteitem'>
+      <view class='itemname'>下单时间:</view>
+      <view class='itemcontent'>2019-05-15 17:00:00</view>
+    </view>
+    <view class='noteitem'>
+      <view class='itemname'>支付方式:</view>
+      <view class='itemcontent'>微信支付</view>
+    </view>
+  </view>
+  
+
+  <view class='note'>
+    <view class='noteitem'>
+      <view class='itemname'>备注:</view>
+      <view class='itemcontent'>无</view>
+    </view>
+    <view class='noteitem'>
+      <view class='itemname'>发票:</view>
+      <view class='itemcontent'>由商家开具纸质发票</view>
+    </view>
+  </view>
+
+
+<van-button type="info" plain hairline round class="button3" size="small" wx:if="{{order.status=='可取片'}}">申 请 仲 裁</van-button>
+
+<van-button type="info" plain hairline round class="button{{(order.status!='待回复'&&order.status!='反馈结束')?'':'2'}}" size="small">{{button1text}}</van-button>
+
+<van-button type="info" round class="button2" size="small" wx:if="{{order.status!='待回复'&&order.status!='反馈结束'}}">{{button2text}}</van-button>

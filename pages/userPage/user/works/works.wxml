@@ -1,0 +1,17 @@
+<!--pages/index/works/works.wxml-->
+<top-bar navH="{{navH}}" pageTitle="作品"></top-bar>
+
+<scroll-view class='scView' bindscroll="handlerScroll" scroll-y style="height: 100%;">
+    <view wx:for="{{workslist}}" wx:key="unique" class="item">
+
+      <view class='itemhead'>
+        <view class='date'>{{item.date}}</view>
+        <view class='background'></view>
+        <view class='modify'>
+        <image src='./images/modify.png'></image></view>
+        <view class='delete'>
+        <image src='./images/delete.png'></image></view>
+      </view>
+      <image src='{{item.imgUrl}}' class='picture' mode='aspectFill'></image>
+    </view>
+</scroll-view>

@@ -1,0 +1,31 @@
+/* pages/userPage/userBox/attestation/attestation.wxss */
+.contain{
+  margin-top: 20rpx;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  border-bottom: #f2f2f2;
+  border-bottom-style: solid;
+  border-width: 1rpx;
+  height: 120rpx;
+  font-size: 40rpx;
+  width: 100%;
+}
+
+
+.item .itemTitle{
+  line-height: 40rpx;
+  margin-top: 40rpx;
+  margin-left: 60rpx;
+}
+
+
+.item image{
+  width: 20rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 60rpx;
+  margin-top: 40rpx;
+}

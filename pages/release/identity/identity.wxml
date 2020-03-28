@@ -1,0 +1,16 @@
+<top-bar navH="{{navH}}" pageTitle="选择身份"></top-bar>
+<view>
+  <block wx:for="{{model}}">
+     <view class="type" bindtap="selectClick" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+  

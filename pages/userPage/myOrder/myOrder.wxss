@@ -1,0 +1,116 @@
+/* pages/userPage/myOrder/myOrder.wxss */
+.item {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  height: 450rpx;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+  border-radius: 18rpx;
+}
+
+.itemhead{
+  font-size: 30rpx;
+  height: 80rpx;
+  width: 100%;
+  display:flex;
+  flex-direction: row; 
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+}
+
+.itemhead .object{
+  width: 70%;
+}
+
+.itemhead .type{
+  color: #4074dd;
+  line-height: 50rpx;
+}
+
+.object{
+  display: flex;
+  flex-direction: row;
+}
+.object image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.object .name{
+  margin-left: 20rpx;
+  line-height: 50rpx;
+}
+
+.content image{
+  width: 320rpx;
+  height: 240rpx;
+  border-radius: 18rpx;
+  margin: 30rpx;
+  margin-top: 0rpx;
+}
+.content .detail{
+  font-size: 30rpx;
+  margin-top: 0rpx;
+}
+
+.detail .name,.type,.price{
+  margin-bottom: 30rpx;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+}
+
+.itembottom{
+  display: flex;
+  flex-direction: row;
+  font-size: 27rpx;
+  color: #4074dd;
+  width: 100%;
+}
+
+.itembottom .datetitle{
+  margin: 30rpx;
+  margin-top: 0rpx;
+}
+.itembottom .date{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  
+}
+
+.itembottom .date{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  
+}
+
+.itembottom .datewithoutTime{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  width: 270rpx;
+}
+
+
+.itembottom .time{
+  margin: 30rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+  width: 110rpx;
+}
+.van-button{
+  margin: 30rpx;
+  margin-right: 10rpx;
+  margin-top: 0rpx;
+  position: absolute;
+  right: 20rpx;
+  
+}

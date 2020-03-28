@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "top-bar": "/component/TopBar/topBar",
+    "tabbar": "../../tabbarComponent/tabbar"
+  }
+}

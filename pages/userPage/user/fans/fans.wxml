@@ -1,0 +1,12 @@
+<!--pages/fans/fans.wxml-->
+<top-bar navH="{{navH}}" pageTitle="粉丝"></top-bar>
+
+  <scroll-view bindscroll="handlerScroll" scroll-y style="height: 100%;">
+    <view wx:for="{{fanslist}}" wx:key="unique" class="item">
+      <image src="{{item.imgUrl}}" class='head'></image>
+      <text>{{item.name}}</text>
+      <view class='background'></view>
+      <image wx:if="{{item.isInterest}}" src='./images/isInterest.png' class='guanzhu'></image>
+      <image wx:else src='./images/notInterest.png' class='guanzhu'></image>
+    </view>
+  </scroll-view>

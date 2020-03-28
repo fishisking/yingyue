@@ -1,0 +1,30 @@
+
+<view class="navBar"  style="height:{{statusBarHeight+titleBarHeight-6}}px" catchtouchmove='true'>
+  <view class="searchfield" bindtap="openSearch" >
+    <image src="images/search.png" class="search-icon"></image>
+    <input placeholder='请输入关键字'></input>
+  </view>
+</view>
+<view class="selectTab" style="margin-top:{{statusBarHeight+titleBarHeight-6}}px" catchtouchmove='true'>
+  <view class="flex-row">
+    <view class="recomandation {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    推荐
+    </view>
+    <view class="concern {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+    关注
+    </view>
+  </view>
+  <view class='onTabLine' style="margin-left:{{175+currentTab*273}}rpx"></view>
+  <view class='line'></view>
+</view>
+<scroll-view scroll-y class="image-list" style="padding-top:{{statusBarHeight+titleBarHeight+40}}px;height:{{(screenHeight-(statusBarHeight+titleBarHeight+40))*px2rpx-(158+66*isIphoneX)}}rpx;"  wx:if="{{currentTab==0}}" >
+  <view wx:for="{{grides}}" class="image-background">
+    <image src="{{item.img}}" class="image-item"  bindtap='goToContentPage' mode="widthFix"></image>
+  </view>
+</scroll-view>
+<scroll-view scroll-y class="image-list" style="padding-top:{{statusBarHeight+titleBarHeight+40}}px;height:{{(screenHeight-(statusBarHeight+titleBarHeight+40))*px2rpx-(158+66*isIphoneX)}}rpx;"  wx:if="{{currentTab==1}}" >
+  <view wx:for="{{grides}}" class="image-background" >
+    <image src="{{item.img}}" class="image-item"  bindtap='goToContentPage' mode="widthFix"></image>
+  </view>
+</scroll-view>
+<tabbar tabbar="{{tabbar}}"></tabbar> 

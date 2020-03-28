@@ -1,0 +1,32 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="选择时间"></top-bar >
+<view class='select-top'>
+  <view class='choose'>
+    <text >已选日期</text>
+  </view>
+  <view class='choosedate'>
+    <text>2019年5月21日</text>
+  </view>
+  <view class='changeday'>
+      <text decode='{{true}}'>换一天</text>
+  </view>
+</view>
+<view class='cutline'></view>
+<!--头部提示-->
+<view class='tips'>
+  <text>●灰色表示约满或不可约</text>
+</view>
+<!--时间选择-->
+  <view class='time'>
+    <view wx:for="{{ timeArr }}" wx:for-item="timeItem" wx:for-index="timeIndex" data-Tindex="{{ timeIndex }}" data-time="{{ timeItem.time}}" bindtap='selectTime' class='listItem {{ currentTime==timeIndex? "current":"" }}' wx:key=''>
+      <text>{{ timeItem.time }}</text>
+      <!-- <text>{{ timeItem.status }}</text> -->
+    </view>
+  </view>
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}" bindtap="goToSubscribe">
+  <view class="tab-content">
+    <view class='confirm'>
+      <text>确定</text>
+    </view>
+  </view> 
+</view>

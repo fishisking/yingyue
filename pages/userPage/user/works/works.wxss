@@ -1,0 +1,54 @@
+/* pages/index/works/works.wxss */
+.scView{
+  margin-bottom: 100rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  margin-top: 50rpx;
+  border-radius: 18rpx;
+  height: 320rpx;
+}
+
+.item .date{
+  width: 250rpx;
+}
+
+.item .background{
+  width: 50%;
+}
+
+.picture {
+  border-radius: 18rpx;
+}
+
+
+.itemhead{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  color: gray;
+}
+.modify{
+  padding: 10rpx;
+  margin-right: 20rpx;
+}
+.modify image{
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.delete{
+    padding: 10rpx;
+}
+
+.delete image{
+  height: 50rpx;
+  width: 50rpx;
+}

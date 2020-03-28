@@ -1,0 +1,238 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="Ta的主页"></top-bar >
+<scroll-view scroll-y="true" class="User-content" style='height:{{screenHeight*px2rpx-200}}rpx;'>
+<!--头部背景图片-->
+  <view class="header-background">
+    <image class="header-pic" src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/aZeMvhxehFlJc6IISpu9S4ayW9JlhjsiQOhYxx4brUk!/b/dL8AAAAAAAAA&bo=2Ag4BAAAAAARB9w!&rf=viewer_4'></image>
+  </view>
+  <!--头部标签-->
+  <view  class="label">
+    <image src='../images/label2.png' mode="aspectFit" style='height:144rpx;width:144rpx;'></image>
+  </view>
+<!--用户头像-->
+  <view class="header-icon">
+    <image src="../images/head-icon.png" mode="aspectFit"></image>
+  </view>
+<!--用户信息-->
+ 
+  <view class="user-info">
+  <view class='flex-row'>
+    <view class='user-name'>海马体(湖滨银泰店)</view>
+  </view>
+  </view>
+  <view class='introduce'>
+  <view class='location'>
+    <image src='../images/location.png' mode="aspectFit"></image>
+    <view class="location-name">杭州市上城区</view>
+  </view>
+  <view class='phone'>
+    <text decode='{{true}}'>&nbsp;</text>
+    <image src='../images/call.png' mode='aspectFit'></image>
+    <text class='makephone' decode="{{true}}">&nbsp;呼叫&nbsp;</text>
+  </view>
+  <!-- <image class="phone" src='../images/call.png' mode='aspectFit'></image>
+  <view class='phonenum'>123-4567-8910</view> -->
+  </view>
+  <!--粉丝、反馈分、成交数、信用分-->
+  <view class='details'>
+  <!--粉丝-->
+    <view class='fans'>
+    <text class='nums'>318</text>
+    <text class='name'>粉丝</text>
+    </view>
+    <view class='cut'></view> 
+  <!--反馈分-->
+    <view class='feedback'>
+    <text class='nums'>5.0</text>
+    <text class='name'>反馈分</text>
+    </view>
+    <view class='cut'></view> 
+  <!--成交数--> 
+    <view class='deal'>
+    <text class='nums'>126</text>
+    <text class='name'>成交数</text>
+    </view> 
+    <view class='cut'></view> 
+  <!--信用分-->
+    <view class='credit'>
+    <text class='nums'>100</text>
+    <text class='name'>信用分</text>
+    </view> 
+  </view>
+  <!--首页、服务、作品、评价-->
+<view class='selectTab'>
+  <view class='flex-row'>
+    <view class="activity {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    首页
+      <view class='onTabLine' wx:if="{{currentTab==0}}"></view>
+    </view>
+    <view class="selectservice {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+    服务
+      <view class='onTabLine' wx:if="{{currentTab==1}}"></view>
+    </view>
+    <view class="works {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+    作品
+      <view class='onTabLine' wx:if="{{currentTab==2}}"></view>
+    </view>
+    <view class="review {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">
+    评价
+      <view class='onTabLine' wx:if="{{currentTab==3}}"></view>
+    </view>
+  </view>
+</view>
+<!--首页内容-->
+<view class="index" wx:if="{{currentTab==0}}">
+<!--首页活动-->
+<view class="index-content">
+  <!--图片素材-->
+  <view class='index-images-display'>
+    <navigator wx:for="{{indexroomList}}"  class="index-show-list">
+     <image src="{{item.url}}"/>          
+    </navigator>
+  </view>
+</view>
+</view>
+<!--服务-->
+<!--女王照(单人)-->
+<view class="set" wx:if="{{currentTab==1}}" >
+  <view class='set-header'>
+    <view class='set-name' bindtap='goTodetails'>
+    <text>女王照(单人照)</text>
+    </view>
+    <view class='set-price'>
+    <text>259元</text>
+    </view>
+    <view class='set-type' bindtap='goTointroduce'>
+    <text class='typec' decode="{{true}}">&nbsp;服务内容&nbsp;</text>
+    </view>
+  </view>
+  <!--图片素材-->
+  <view class='images-display' bindtap='goTodetails'>
+    <view wx:for="{{roomList}}"  class="show-list">
+     <image src="{{item.url}}"/>          
+    </view>
+  </view>
+<!--女王照(双人)-->
+  <view class='set-header'>
+    <view class='set-name' bindtap='goTodetails'>
+      <text>女王照(双人照)</text>
+    </view>
+    <view class='set-price'>
+      <text>459元</text>
+    </view>
+    <view class='set-type' bindtap='goTointroduce'>
+      <text class='typec' decode="{{true}}">&nbsp;服务内容&nbsp;</text>
+    </view>
+  </view>
+   <!--图片素材-->
+  <view class='images-display' bindtap='goTodetails'>
+    <view wx:for="{{roomList2}}"  class="show-list">
+     <image src="{{item.url}}"/>          
+    </view>
+  </view>
+</view>
+<!--活动优惠券-->
+<!-- <view class="coupon" wx:if="{{currentTab==1}}">
+<view class='coupon-content'>
+  <image src='../images/coupon.png'></image>
+</view>
+<view class='coupon-num'>
+  <text class='yuan'>30</text>
+</view>
+<view class='coupon-rule'>
+  <text class='rules'>订单满300元可使用</text>
+</view>
+<view class='receive'>
+<text>立</text>
+<text>即</text>
+<text>领</text>
+<text>取</text>
+</view>
+
+<view class='coupon-content'>
+  <image src='../images/coupon.png'></image>
+</view>
+<view class='coupon-num'>
+  <text class='yuan'>60</text>
+</view>
+<view class='coupon-rule'>
+  <text class='rules'>订单满500元可使用</text>
+</view>
+<view class='receive'>
+<text>立</text>
+<text>即</text>
+<text>领</text>
+<text>取</text>
+</view>
+</view> -->
+
+<!--作品-->
+<view wx:if="{{currentTab==2}}"></view>
+<!--评价-->
+<view class="valuation" wx:if="{{currentTab==3}}">
+<!--评价1-->
+<view class='valuation-content'>
+  <view class='make-stars'>
+  <text class='grades'>5.0</text>
+    <view class='stars'>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+    </view>
+  </view>
+    <view class='comment'>摄影师人真的超级好，不仅很耐心技术还很专业</view>
+    <view class='line'></view>
+</view>
+<!--评价2-->
+<view class='valuation-content'>
+  <view class='make-stars'>
+  <text class='grades'>5.0</text>
+    <view class='stars'>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+    </view>
+  </view>
+    <view class='comment'>修片老师很耐心，陪我修了大半天，最后我终于拿到了喜欢的照片</view>
+    <view class='line'></view>
+</view>
+<!--评价3-->
+<view class='valuation-content'>
+  <view class='make-stars'>
+  <text class='grades'>4.0</text>
+    <view class='stars'>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/fullstar.png'></image>
+      <image src='../images/emptystar.png'></image>
+    </view>
+  </view>
+    <view class='comment'>哈哈哈，我感觉总体还行，就是化妆师好像把我眉毛画的有点歪了</view>
+    <view class='line'></view>
+</view>
+<!--评论数-->
+  <view class='comment-nums'>
+  <text>共3条评论</text>
+  </view>
+
+</view>
+
+</scroll-view>
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}">
+  <view class="tab-content">
+    <view class="letter">
+      <text>私信</text>
+    </view>
+    <view class='viewer'>
+      <text>关注</text>
+    </view>
+    <view class='book' bindtap="goToSubscribe">
+      <text>预约</text>
+     </view>
+  </view> 
+</view>

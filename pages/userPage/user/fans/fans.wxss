@@ -1,0 +1,29 @@
+/* pages/fans/fans.wxss */
+.item{
+  border-bottom: 2rpx solid #f2f2f2;
+  display: flex;
+  padding: 30rpx 40rpx;
+}
+
+.item .head{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.item text{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  font-size: 35rpx;
+  width: 250rpx;
+}
+
+.item .background{
+  width:200rpx;
+}
+
+.item .guanzhu{
+  width: 120rpx;
+  height: 45rpx;
+  float: right;
+  margin-top: 25rpx;
+}

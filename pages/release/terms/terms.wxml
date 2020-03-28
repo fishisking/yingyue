@@ -1,0 +1,3 @@
+<!--pages/terms/terms.wxml-->
+<top-bar navH="{{navH}}"></top-bar>
+<text>pages/terms/terms.wxml</text>

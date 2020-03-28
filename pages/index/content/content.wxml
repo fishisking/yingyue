@@ -1,0 +1,74 @@
+<!--pages/content/content.wxml-->
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="写真"></top-bar >
+<view class="header">
+  <view class="title-name">难觅归处</view>
+  <view class='line'></view>
+  <view class="header-detail"> 
+    <view class="header-publisher" bindtap='goToUser'>
+      <image class="avator" src="../images/3.png"></image>
+      <view class="publisher-name">
+        <view class="publisher-name-title">发布者</view>
+        <view class="publisher-name-text">元彬yorb</view>
+      </view>
+      <view class="concernButton">
+        <view class="button-text">关注</view>
+      </view>
+    </view>
+    <view class="header-photographer" bindtap='goToUser'>
+      <image class="avator" src="../images/3.png"></image>
+      <view class="photographer-name">
+        <view class="photographer-name-title">摄影师</view>
+        <view class="photographer-name-text">xuW豪</view>
+      </view>
+      <view class="concernButton">
+        <view class="button-text">关注</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="content-area" >
+  <scroll-view scroll-y class="image-list" style="padding-bottom:100rpx;">
+    <view wx:for="{{imgList}}" class="image-background">
+      <image src="{{item.src}}" class="image-item" mode="widthFix" style="width:100%"></image>
+    </view>
+    <view>
+    <view class="publishInformation">发布于2019-04-17,该作品著作权归属于摄影师与对应用户</view>
+    <view class="place-area">
+      <image class="dingwei" src="../content/icon/定位.png"></image>
+      <view class='location'>拍摄地点:杭州市西溪国家湿地公园</view>
+    </view>
+    <view class="photo-detail">
+      <view class="style">具体风格:复古/森系/清新</view>
+      <view class="equipment">拍摄设备:佳能5DS</view>
+    </view>
+    <view class="article">难得在午后去了一次西溪湿地,空气超级清新的!\n
+      摄影小哥哥超级棒
+    </view>
+    <view class="zhankai">展开</view>
+  </view>
+  </scroll-view>
+</view>
+<view class="bottom-bar {{isIphoneX?'iphoneX-height':''}}" >
+<view class="bottom-bar-area">
+  <view class="bottom-bar-icon-area" >
+    <image src='../content/icon/watch.png' class="bottom-bar-icon"></image>
+    <view class="bottom-bar-text">164</view>
+  </view>
+  <view class="bottom-bar-icon-area" bindtap='changeLoveIcon'>
+    <image src="{{ love? '../content/icon/love2.png' : '../content/icon/love1.png'}}"class="bottom-bar-icon"></image>
+    <view class="bottom-bar-text">92</view>
+  </view>
+  <view class="bottom-bar-icon-area">
+    <image src='../content/icon/talk.png' class="bottom-bar-icon" bindtap='openCommentPage'></image>
+    <view class="bottom-bar-text">65</view>
+  </view>
+  <view class="bottom-bar-icon-area" bindtap='changeStarIcon'>
+    <image src="{{ star? '../content/icon/star2.png' : '../content/icon/star1.png'}}" class="bottom-bar-icon"></image>
+    <view class="bottom-bar-text">18</view>
+  </view>
+  <view class="bottom-bar-icon-area">
+    <image src='../content/icon/jubao.png' class="bottom-bar-icon"></image>
+    <view class="bottom-bar-text">27</view>
+  </view>
+</view>
+</view>

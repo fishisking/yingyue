@@ -1,0 +1,94 @@
+/*标题*/
+.title{
+  padding-top: 50rpx;
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: 500;
+}
+/*价格*/
+.price{
+  margin-top: 15rpx;
+  text-align: center;
+  color: #ffa942;
+  font-size: 30rpx;
+}
+.price .nums{
+  font-size: 40rpx;
+}
+/*天生合群 神秘莫测*/
+.flex-row{
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+
+}
+.onTabLine{
+  width: 120rpx;
+  height: 5rpx;
+  background-color:#4074dd;
+  margin-top:15rpx;
+}
+.selectTab{
+  margin-top: 45rpx; 
+}
+.type1,.type2{
+  display: flex;
+  flex-direction: column;
+  font-size: 36rpx;
+  color:#aeaeae;
+  width: 250rpx;
+  align-content: center;
+  align-items: center;
+}
+
+.active{
+  color:#4074dd;
+}
+/*图片展示*/
+.images-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+.show-list image{
+  margin-top: 20rpx;
+  width: 300rpx;
+  height: 398.8rpx;
+  box-shadow: 4rpx 6rpx 6rpx #CDCDCD;
+  background: #aeaeae;
+  border-radius: 12rpx;
+  position: relative;
+} 
+/*底部导航*/
+/*收藏、服务内容、预约*/
+.bottom-tab{
+  bottom:0;
+  height: 118rpx;
+  width: 100%;
+  background: linear-gradient(to right, #5594ff , #3bc3ff);
+  position: fixed;
+  z-index: 9999;
+}
+.bottom-tab.iphoneX-height{
+    padding-bottom: 20rpx;
+}
+.tab-content{
+  flex-direction: row;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+}
+.Collection,.service,.order{
+  margin-top: 30rpx;
+  color: #ffffff;
+  font-size: 36rpx;
+  width:220rpx;
+  text-align: center;
+}
+
+

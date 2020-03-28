@@ -1,0 +1,59 @@
+/* pages/message/Myconcern/myconcern.wxss */
+/*分割线样式*/
+.divLine{
+ background: #cacaca;
+ width: 100%;
+ height: 3rpx;
+}
+
+.concern-item{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.concern-item .content{
+  flex-grow: 1;
+  height: 100rpx;
+  padding-top: 25rpx;
+  padding-left: 54rpx;
+}
+.concern-item .content image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.concern-item .txt{
+  flex-grow: 5;
+  height: 100rpx;
+  width: 400rpx;
+  padding-top: 18rpx;
+}
+.concern-item .txt .name{
+  font-size: 30rpx;
+  margin-left: -25rpx;
+}
+.concern-item .txt .operator{
+  font-size: 26rpx;
+  margin-top: 5rpx;
+  margin-left: -25rpx;
+}
+.concern-item .txt .lasttime{
+  font-size: 26rpx;
+  float: right;
+  color: #666666;
+  padding-right: 54rpx;
+}
+.concern-item .pic{
+  width: 100%;
+  text-align: center;
+  margin-top: -10rpx;
+  margin-bottom: 30rpx;
+}
+.concern-item .pic image{
+  width: 640rpx;
+}
+
+.concern-item .divline{
+  background: #cacaca;
+  width: 100%;
+  height: 3rpx;
+}

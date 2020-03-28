@@ -1,0 +1,201 @@
+/*服务内容*/
+.service-content{
+  display: flex;
+  flex-direction: column; 
+}
+/*标题*/
+.title{
+  margin-top: 50rpx;
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+  font-weight: 500;
+}
+.ontop{
+  margin-top: 32rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 32rpx;
+  color: #aeaeae;
+  justify-content: center;
+}
+.type{
+  text-align: center;
+  width: 28%;
+
+}
+.style{
+  width: 28%;
+  text-align: center;
+
+}
+.ontop-name{
+  margin-top: 14rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 32rpx;
+  color: #4985ff;
+  justify-content: center;
+}
+.typename{
+  text-align: center;
+  width: 28%;
+
+}
+.stylename{
+  width: 28%;
+  text-align: center;
+}
+/*各种各样的的类型*/
+.servicetypes{
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+.servicetypes .selftype{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 200rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx; 
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}
+.selftype image{
+  margin-left:52rpx; 
+  width: 48rpx;
+  height: 48rpx;
+}
+.selftype text{
+    margin-top: 15rpx;
+}
+.selftype .nums{
+  color: #4985ff;
+}
+/*分割线*/
+.cutline{
+  background: #aeaeae;
+  height: 1px;
+  width: 80%;
+  margin-top: 30rpx;
+  margin-left: 10%;
+}
+/*说明*/
+.notice{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  flex-direction: column;
+}
+.noticename{
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  width: 80%;
+  margin-left: 25%;
+  margin-top: 10rpx;
+  text-align: center;
+}
+.noticename .nowcolor{
+  margin-right: 20%;
+  color: #aeaeae;
+}
+.noticename .nowtype{
+  width: 15%;
+  text-align: center;
+}
+/*分割线2*/
+.cutline2{
+  background: #aeaeae;
+  height: 1rpx;
+  width: 80%;
+  margin-top: 30rpx;
+  margin-left: 10%;
+}
+/*改签与退订政策*/
+.policy{
+  display: flex;
+  flex-direction: column;
+  width: 92%
+}
+.policyname{
+  font-weight: 500;
+  font-size: 32rpx;
+  margin-left: 8%;
+  margin-top: 40rpx;
+}
+.policyno1,.policyno2{
+  margin-left: 8%;
+  font-size: 28rpx;
+  color: #aeaeae;
+  margin-top: 10rpx;
+}
+/*服务说明*/
+.intro{
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+.introname{
+  font-weight: 500;
+  font-size: 32rpx;
+  margin-left: 8%;
+  margin-top: 40rpx;
+}
+.introno1,.introno2,.introno3{
+  margin-left: 8%;
+  font-size: 28rpx;
+  color: #aeaeae;
+  margin-top: 10rpx;
+}
+/*企业图*/
+.logo{
+  width: 100%;
+  margin: 30rpx 25rpx 0 25rpx;
+
+}
+.logo image{
+  width: 700rpx;
+  height: 350rpx;
+
+}
+/*底部导航*/
+/*关注*/
+.bottom-tab{
+  bottom:0;
+  height: 118rpx;
+  width: 100%;
+  background: linear-gradient(to right, #5594ff , #3bc3ff);
+  position: fixed;
+  z-index: 9999;
+}
+.bottom-tab.iphoneX-height{
+    padding-bottom: 20rpx;
+}
+.tab-content{
+  flex-direction: row;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+}
+.book{ 
+  color: #ffffff;
+  font-size: 36rpx;
+  margin-top: 30rpx;
+  align-content: center;
+  justify-content: center;
+}

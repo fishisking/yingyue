@@ -1,0 +1,148 @@
+
+<!--背景图片组，包括导航栏-->
+<view class='background_box'>
+  <!-- <view class='navigation'>
+    <view class='title' >我的</view>
+  </view> -->
+  <view class='background' bindtap="chooseImage">
+    <image src='{{backgroundSrc}}' mode='aspectFill' class='backgroundImage'></image>
+  </view>
+</view>
+
+
+  <!--背景图片-->
+<!--用户信息-->
+<view class="container">
+<view class="user_box">
+  <view class='user'>
+    <view class='user_head_name'>
+      <image src='/images/default.png' class='user_head' bindtap="toggleActionSheet2"></image>
+      <view class='user_name'>登陆/注册</view>
+      <van-tag class='tag' color="#9BCEFF" wx:if="{{userType=='ordinaryUser'}}">已实名</van-tag>
+      <van-tag class='tag' color="#FFBC6B" wx:if="{{userType=='servicer'}}">服务机构</van-tag>
+      <van-tag class='tag' color="#B496FF" wx:if="{{userType=='photographer'}}">摄影师</van-tag>
+      <van-tag class='tag' color="#9BCEFF" wx:if="{{userType=='photographer_servicer'}}">摄影机构</van-tag>
+    </view>
+    <view class='grade'>
+      <view class='creditGrade'>信用分</view>
+      <text class='creditNumber'>100</text>
+      <text class='apartSymbol'>＞</text>
+      <view class='feedbackGrade'>反馈分</view>
+      <text class='feedbackNumber'>5.0</text>
+      <text class='apartSymbol'>＞</text>
+    </view>
+
+
+  </view>
+
+<!--粉丝、关注、作品、足迹-->
+  <view class='project'>
+    <view class='fans' bindtap='getfanspage'>
+      <view class='number'>1000</view>
+      <view class='project_name'>
+      <view class='name'>粉丝</view>
+      <text class='project_apart'>|</text>
+      </view>
+    </view>
+    <view class='interests' bindtap='getinterestspage'>
+      <view class='number'>0</view>
+      <view class='project_name'>
+        <view class='name'>关注</view>
+        <text class='project_apart' wx:if="{{userType!='servicer'}}">|</text>
+      </view>
+    </view>
+    <view class='works' wx:if="{{userType!='servicer'}}" bindtap='getworkspage'>
+      <view class='number'>0</view>
+      <view class='project_name'>
+        <view class='name' >作品</view>
+        <text class='project_apart' wx:if="{{userType!='photographer_servicer'}}">|</text>
+      </view>
+    </view>
+    <view class='footprint' wx:if="{{userType=='ordinaryUser'||userType=='photographer'}}" bindtap='getfootprintpage'>
+      <view class='number'>0</view>
+      <view class='project_name' >      
+        <view class='name'>足迹</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<!--摄影师的订单-->
+<view class='photographer_box' wx:if="{{userType=='photographer'}}">
+  <view class='box_title' bindtap='getphotographerOrderpage'>
+    <view class='my_title'>摄影师的订单</view>
+  </view>
+
+  <view class='box_content'>
+    <view wx:for="{{array_photographer_box}}" wx:key="item.title" class='item' bindtap='getphotographerOrdertabpage' data-pagenum='{{item.pagenum}}'>
+      <image src='{{item.imgUrl}}'></image>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+</view>
+
+
+<!--我的订单-->
+<view class='my_box' wx:if="{{userType!='servicer'}}">
+
+
+  <view class='box_title' bindtap='getmyorderpage'>
+    <view class='my_title'>我的订单</view>
+  </view>
+
+  <view class='box_content'>
+    <view wx:for="{{array_my_box}}" wx:key="item.title" class='item' bindtap='getmyordertabpage' data-pagenum='{{item.pagenum}}'>
+      <image src='{{item.imgUrl}}'></image>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+
+</view>
+
+<!--相关服务订单-->
+<view class='service_box' wx:if="{{userType!='photographer_servicer'}}">
+  <view class='box_title' bindtap='getservicepage'>
+    <view class='my_title'>相关服务订单</view>
+  </view>
+
+  <view class='box_content'>
+    <view class='item' id='payS' bindtap='getservicetabpage' hidden="{{userType=='servicer'}}" data-pagenum='1'>
+      <image src='/images/service/pay.png' ></image>
+      <view>待支付</view>
+    </view>
+    <view wx:for="{{array_service_box}}" wx:key="item.title" class='item' bindtap='getservicetabpage' data-pagenum="{{userType=='servicer'?item.pagenum2:item.pagenum}}" >
+      <image src='{{item.imgUrl}}'></image>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+
+</view>
+
+
+<!-- 收藏,卡券等组件 -->
+  <view class="choose_box">
+
+    <view wx:for="{{array}}" wx:key="item.title" class='item' id='{{item.go}}'bindtap='getfunctionpage'>
+      <image src='{{item.imgUrl}}'></image>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+
+
+</view>
+
+
+
+
+<van-action-sheet
+    show="{{ show }}"
+    actions="{{init}}"
+    cancel-text="取消"
+    bind:close="toggleActionSheet2"
+    bind:cancel="toggleActionSheet2"
+    bind:select="changeUser"
+  />
+
+  <tabbar tabbar="{{tabbar}}"></tabbar> 

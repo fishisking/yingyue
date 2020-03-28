@@ -1,0 +1,70 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="服务内容"></top-bar >
+<!--头部标题照片类型-->
+<scroll-view scroll-y="true" class="service-content" style='height:1320rpx;'>
+  <view class='title'>
+    <text>女王照(单人照)</text>
+  </view>
+
+  <view class='ontop'>
+    <view class='type'>
+      <text>类型</text>
+    </view>
+    <view class='style'>
+      <text>风格</text>
+    </view>
+  </view>
+
+  <view class='ontop-name'>
+    <view class='typename'>
+      <text>特殊照</text>
+    </view>
+    <view class='stylename'>
+      <text>女王照</text>
+    </view>
+  </view>
+  <!--加载照片-->
+  <view class='servicetypes'>
+    <view class='selftype' wx:for="{{roomlist}}">
+      <image src='{{item.image}}'></image>
+      <text>{{item.typename}}</text>
+      <text class='nums'>{{item.nums}}</text>
+    </view>
+  </view>
+  <!--美丽的分割线-->
+  <view class='cutline'></view>
+<!--说明-->
+<view class="notice">
+  <view class='noticename' wx:for="{{roomlist2}}">
+      <text class='nowcolor'>{{item.name}}</text>
+      <text class='nowtype'>{{item.type}}</text>
+    </view>
+</view>
+ <!--美丽的分割线-->
+  <view class='cutline2'></view>
+<!--改签与推定政策-->
+<view class='policy'>
+  <view class='policyname'>改签与退订政策</view>
+  <view class='policyno1'>● 每个订单可修改2次拍摄时间，拍摄当日不可更改</view>
+  <view class='policyno2'>● 拍摄前48小时内取消订单需扣除订单金额的15%作为手续费</view>
+</view> 
+<!--服务说明--> 
+<view class='intro'>
+  <view class='introname'>服务说明</view>
+  <view class='introno1'>● 我们将为您提供6存冲印照一张(半身照)</view>
+  <view class='introno2'>● 加修加印：80元/张</view>
+  <view class='introno3'>● 单独加印收费：20元/张</view>
+</view>
+<!--企业商标-->
+<view class="logo">
+  <image src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/v8B8ur4x8Es1e1dcCH7IdRJyoHjcTtIPAYUUznm.zHc!/b/dMUAAAAAAAAA&bo=cAg4BAAAAAARB3Q!&rf=viewer_4'></image>
+</view>
+</scroll-view>
+
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}" bindtap="goToSubscribe">
+  <view class="tab-content">
+    <view class='book'>
+      <text>立即预约</text>
+    </view>
+  </view> 
+</view>

@@ -1,0 +1,265 @@
+.Submission-Content{
+  display: flex;
+  flex-direction: column;
+}
+/*拍摄人信息*/
+.self-content{
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  font-size: 36rpx;
+  margin-top: 40rpx;
+}
+.self-content image{
+  width: 38rpx;
+  height: 38rpx;
+}
+.self-content .selfpic{
+  margin-left: 42rpx;
+  margin-top: 6rpx;
+}
+.self-content .info{
+  margin-left: 20rpx;
+}
+/*姓名*/
+.name,.gender,.birth{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #aeaeae;
+  margin-left: 90rpx;
+}
+.input{
+  font-size: 30rpx;
+  margin-left:60rpx;
+  /* margin-top:-6rpx; */
+}
+/*分割线*/
+.cutline{
+  margin-top: 36rpx;
+  height: 40rpx;
+  width: 100%;
+  background: #f7fbff;
+}
+/*已选服务*/
+.select-content{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+}
+.select-content image{
+  width: 38rpx;
+  height: 38rpx;
+
+}
+.select-content .selectpic{
+  margin-left: 42rpx;
+  margin-top: 6rpx;
+}
+.select-content .info{
+  font-weight: 500;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+}
+/*已选服务模板*/
+.Template{
+  margin-top: 20rpx;
+  width: 90%;
+  height: 180rpx;
+  margin-left: 5%;
+  border-radius: 15rpx;
+  background: #f7fbff;
+  border: 1px #cbe7ff solid;
+}
+.basic{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rpx;
+  margin-left: -45rpx;
+}
+.basic .name{
+  font-size: 30rpx;
+  color: #303030;
+}
+.basic .type{
+  margin-top: 25rpx;
+  margin-left: 65rpx;
+  font-size: 30rpx;
+  color: #7aa6ff;
+}
+.basic .price{
+  margin-top: 25rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  margin-left: 65rpx;
+  color: #ffa942;
+}
+.up{
+  margin-left: 45rpx;
+}
+.update{
+  font-size: 24rpx;
+  color: #9e9e9e;
+}
+.takentime{
+  display: flex;
+  flex-direction: row;
+  margin-left: 45rpx;
+}
+.takentime .date{
+  font-size: 30rpx;
+  color: #303030
+}
+.takentime .time{
+  width: 150rpx;
+  font-size: 30rpx;
+  color: #7aa6ff;
+  margin-left: 95rpx;
+}
+/*分割线2*/
+.cutline2{
+  margin-top: 56rpx;
+  height: 40rpx;
+  width: 100%;
+  background: #f7fbff;
+}
+.clicklogo{
+  margin-left: 150rpx;
+}
+.clicklogo image{
+  width: 20rpx;
+  height: 30rpx;
+}
+/*其他*/
+.other{
+  display: flex;
+  flex-direction: column;
+  margin-left: 90rpx;
+  margin-top: 40rpx;
+}
+.other .coupon{
+  display: flex;
+  flex-direction: row;
+}
+.iscoupon{
+  font-size: 28rpx;
+  width: 100rpx;
+}
+.hasnone{
+  font-size: 28rpx;
+  width: 300rpx;
+  margin-left: 150rpx;
+  text-align: right;
+  color: #aeaeae;
+  /* font-weight: 500; */
+}
+.gotocoupon{
+  margin-left: 10rpx;
+  width: 16rpx;
+  height: 28rpx;
+  /* margin-top: -4rpx; */
+}
+.gotocoupon image{
+  width: 16rpx;
+  height: 28rpx;
+}
+.other .activity{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+.isactivity{
+  font-size: 28rpx;
+  width: 150rpx;
+}
+.isnums{
+  font-size: 32rpx;
+  color: #ffa942;
+  width: 250rpx;
+  text-align: right;
+  margin-left: 170rpx;
+  font-weight: 500;
+}
+/*备注*/
+.Remarks{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 28rpx;
+}
+.isRemarks{
+    width: 500rpx;
+}
+/* .isRemarks .input{
+  margin-left: 200rpx;
+} */
+/*发票*/
+.invoice{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.isinvoice{
+  font-size: 28rpx;
+  width: 100rpx;
+}
+.invoice .istypein{
+  width: 250rpx;
+  text-align: right;
+  font-size: 28rpx;
+  margin-left: 200rpx;
+  color: #aeaeae;
+}
+
+
+
+/*底部导航*/
+.bottom-tab{
+  bottom:0;
+  height: 118rpx;
+  width: 100%;
+  background: linear-gradient(to right, #5594ff , #3bc3ff);
+  position: fixed;
+  z-index: 9999;
+}
+.bottom-tab.iphoneX-height{
+    padding-bottom: 20rpx;
+}
+.tab-content{
+  flex-direction: row;
+  display: flex;
+}
+.bill image{
+  width:48rpx;
+  height: 48rpx;
+  margin-top: 30rpx;
+  margin-left: 80rpx;
+}
+.pay{
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  margin-top: 16rpx;
+  width: 300rpx;
+}
+.pay .coupon{
+  font-size: 30rpx;
+}
+.bottomcut{
+  width: 1px;
+  background: #ffffff;
+  height: 60rpx;
+  margin-top: 26rpx;
+  margin-left: 80rpx;
+}
+.gotopay{
+  font-size: 32rpx;
+  color: #ffffff;
+  width: 200rpx;
+  text-align: center;
+  margin-top: 30rpx;
+}
+

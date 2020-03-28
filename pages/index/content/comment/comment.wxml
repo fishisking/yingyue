@@ -1,0 +1,70 @@
+<!--pages/content/comment/comment.wxml style="margin-bottom:15rpx;"-->
+<top-bar navH="{{navH}}" catchtouchmove="true"  pageTitle="评论"></top-bar >
+<view class="container1">
+  <image class="avator" src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/DMOHeIcaiX442S3ZnafmmEIIEUgGhU6BTeSDn2vj9cE!/b/dL4AAAAAAAAA&bo=4wHkAQAAAAADByU!&rf=viewer_4'></image>
+  <view class="comment-area">
+    <view class="comment-area-header row-flex">   
+     <view class="comment-area-header-left column-flex">
+        <view class="id">徐文豪</view>
+        <view class="date-time">
+          <view class="date">04-17</view>
+          <view class="time">11:20</view>
+        </view>
+      </view>
+      <view class="like-icon-area">
+        <image src="images/6.png" class="like-icon"></image>
+        <view class="like-icon-text">15</view>
+      </view>
+      
+    </view>
+    <view class="content">小姐姐,请问这里是西溪湿地的哪里啊？</view>
+  </view>  
+</view>
+<view class='line'></view>
+<view class="container1 response" style='margin-bottom:8rpx;'>
+  <image class="avator" src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/DMOHeIcaiX442S3ZnafmmEIIEUgGhU6BTeSDn2vj9cE!/b/dL4AAAAAAAAA&bo=4wHkAQAAAAADByU!&rf=viewer_4'></image>
+  <view class="comment-area" >
+    <view class="comment-area-header row-flex" style='margin-top:40rpx;'>   
+     <view class="comment-area-header-left column-flex">
+        <view class="id">元炳yotb(发布者)</view>
+        <view class="date-time">
+          <view class="date">04-17</view>
+          <view class="time">11:20</view>
+        </view>
+      </view>
+      <view class="like-icon-area">
+        <image src="images/6.png" class="like-icon"></image>
+        <view class="like-icon-text">15</view>
+      </view>
+      
+    </view>
+    <view class="content">你看请看我上一条评论</view>
+  </view>  
+</view>
+<view class="container1 response">
+  <image class="avator" src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/DMOHeIcaiX442S3ZnafmmEIIEUgGhU6BTeSDn2vj9cE!/b/dL4AAAAAAAAA&bo=4wHkAQAAAAADByU!&rf=viewer_4'></image>
+  <view class="comment-area" >
+    <view class="comment-area-header row-flex" style='margin-top:40rpx;'>   
+     <view class="comment-area-header-left column-flex">
+        <view class="id">元炳yotb(发布者)</view>
+        <view class="date-time">
+          <view class="date">04-17</view>
+          <view class="time">11:20</view>
+        </view>
+      </view>
+      <view class="like-icon-area">
+        <image src="images/6.png" class="like-icon"></image>
+        <view class="like-icon-text">15</view>
+      </view>
+      
+    </view>
+    <view class="content">哦好的我知道了</view>
+  </view>  
+</view>
+<view class="express-comment-area {{isIphoneX?'iphoneX-height':''}}" >
+  <view class="line"></view>
+  <view class="searchfield row-flex">   
+    <view class="placeholder">发表你的评论,让评论更精彩</view>
+    <view class="send-button">发送</view>
+  </view>
+</view>

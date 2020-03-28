@@ -1,0 +1,183 @@
+/*标题框样式*/ 
+.writetitle{
+  margin-left: 54rpx;
+  margin-right: 54rpx;
+  padding-top: 50rpx;
+  display: flex;
+  padding-bottom: 16rpx;
+  font-size:30rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+/*身份框，类型框，风格框样式*/ 
+.choose{
+  margin-left: 54rpx;
+  margin-right: 54rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.choose .text1{
+  margin-top: 32rpx;
+  margin-bottom: 32rpx;
+  font-size: 32rpx;
+}
+.choose .text2{
+  margin-top: 32rpx;
+  margin-bottom: 32rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.choose .text2 .answer{
+  font-size:32rpx;
+  color: #4097dd;
+}
+.choose .text2 .Image{
+  margin-left: 34rpx;
+  width: 20rpx;
+  height: 40rpx;
+}
+/*内心框样式*/ 
+.mood{
+  margin-left: 54rpx;
+  margin-right: 54rpx;
+  padding-top: 36rpx;
+  display: flex;
+  font-size: 30rpx;
+  height: 210rpx;
+}
+/*话题框样式*/
+.topic{
+  margin-left: 54rpx;
+  padding-bottom: 32rpx;
+}
+.topic image{
+  width: 120rpx;
+  height: 50rpx;
+}
+/*上传框样式*/ 
+.upload{
+  margin-left: 54rpx;
+  height: 220rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+/*上传封面框样式*/ 
+.cover{
+  width: 220rpx;
+  height: 220rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:2rpx dashed gray;
+}
+.cover image{
+  width: 120rpx;
+  height: 120rpx;
+}
+/*上传照片框样式*/
+.photo{
+  margin-left: 54rpx;
+  width: 180rpx;
+  height: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:2rpx dashed gray;
+}
+.photo image{
+  width: 100rpx;
+  height: 100rpx;
+}
+/*个性水印框样式*/
+.watermark{
+  margin-left: 54rpx;
+  margin-right: 54rpx;
+  padding:30rpx 0 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.watermark .text{
+  display: flex;
+  align-items: center;
+  font-size:32rpx;
+}
+.watermark .Image{
+  display: flex;
+  align-items: center;
+}
+.watermark .Image image{
+  width: 100rpx;
+  height: 100rpx;
+}
+/*设备框样式*/
+.equipment{
+  margin-left: 54rpx;
+  margin-right: 54rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.equipment .text{
+  margin-top: 32rpx;
+  margin-bottom: 32rpx;
+  font-size: 32rpx;
+}
+.equipment .name{
+  margin-top: 32rpx;
+  margin-bottom: 32rpx;
+  display: flex;
+  font-size: 32rpx;
+}
+/*条款框样式*/
+.terms{
+  margin-left: 54rpx;
+  margin-right: 54rpx;
+  display: flex;
+  flex-direction: row;
+  padding:10rpx 0 10rpx 0;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.terms .text1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+}
+.terms .text2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #4097dd;
+}
+.terms .imagesiez{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 2;
+}
+.terms .imagesiez image{
+  width: 100rpx;
+  height: 100rpx;
+}
+/*发布框样式*/
+.publish{
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  background-color: #1E90FF;
+  color: white;
+  font-size: 44rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,84 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="提交订单"></top-bar >
+<scroll-view scroll-y="true" style='height:1310rpx;' class='Submission-Content'>
+ <!--拍摄人信息-->
+  <view class='self-content'>
+    <image class="selfpic" src='../../images/self.png'></image>
+    <view class='info'>拍摄人信息</view>
+  </view>
+  <view class='name'><text>姓名</text>
+    <input class='input' placeholder="请填写" placeholder-style="color:#d8d8d8;width:100rpx;"></input>
+  </view>
+  <view class='gender'><text>性别</text>
+    <input class='input' placeholder="男" placeholder-style="color:#d8d8d8;width:100rpx;"></input>
+  </view>
+  <view class='birth'><text>生日</text>
+    <input class='input' placeholder="2019-05-01" placeholder-style="color:#d8d8d8;width:100rpx;"></input>
+  </view>
+  <!--分割线-->
+  <view class='cutline'></view>
+  <!--已选服务-->
+  <view class='select-content'>
+    <image class="selectpic" src='../../images/selecttag.png'></image>
+    <view class='info'>已选服务</view>
+  </view>
+  <view class='Template' wx:for="{{lists}}">
+    <view class='basic'>
+      <text class='name'>{{item.name}}</text>
+      <text class='type'>{{item.type}}</text>
+      <text class='price'>{{item.price}}</text>
+    </view>
+    <view class='up'>
+      <text class='update'>{{item.update}}</text>
+    </view>
+    <view class='takentime'>
+      <text class='date'>{{item.date}}</text>
+      <text class='time'>{{item.time}}</text>
+      <view class='clicklogo'><image src='../../images/right.png'></image></view>
+    </view>
+  </view>
+
+   <!--分割线-->
+  <view class='cutline2'></view>
+<!--优惠券、其他优惠等-->
+<view class='other'>
+<!--优惠券-->
+  <view class='coupon'>
+    <view class='iscoupon'>优惠券</view>
+    <view class='hasnone'>暂无可用券</view>
+    <view class='gotocoupon'><image src='../../images/right.png'></image></view>
+  </view>
+  <!--其他优惠-->
+  <view class='activity'>
+    <view class='isactivity'>其他优惠</view>
+    <view class='isnums'>-30元</view>
+  </view>
+  <!--备注-->
+  <view class='Remarks'>
+    <view class='isRemarks'>备注</view>
+    <input class='input' placeholder="请填写备注" placeholder-style="color:#aeaeae;width:100rpx;font-size:28rpx;"></input>
+  </view>
+  <!--发票-->
+  <view class='invoice'>
+    <view class='isinvoice'>发票</view>
+    <view class='istypein'>发票由商家提供</view>
+    <view class='gotocoupon'><image src='../../images/right.png'></image></view>
+  </view>
+</view>
+</scroll-view>
+
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}">
+  <view class="tab-content">
+    <view class='bill'>
+      <image src='../../images/list.png'></image>
+    </view>
+    <view class="pay">
+      <text>需付款：618元</text>
+      <text class='coupon'>已优惠：30元</text>
+    </view>
+    <view class='bottomcut'></view>
+    <view class='gotopay'>
+      <text>前往支付</text>
+    </view>
+  </view> 
+</view>

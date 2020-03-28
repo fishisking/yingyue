@@ -1,0 +1,119 @@
+<top-bar navH="{{navH}}" pageTitle="具体风格"></top-bar>
+<view wx:if="{{type=='写真'}}">
+<view>
+  <block wx:for="{{model1}}">
+     <view class="type" bindtap="selectClick1" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+</view>
+
+<view wx:if="{{type=='旅拍'}}">
+<view>
+  <block wx:for="{{model2}}">
+     <view class="type" bindtap="selectClick2" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+</view>
+
+<view wx:if="{{type=='商业照'}}">
+<view>
+  <block wx:for="{{model3}}">
+     <view class="type" bindtap="selectClick3" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+</view>
+
+<view wx:if="{{type=='婚纱'}}">
+<view>
+  <block wx:for="{{model4}}">
+     <view class="type" bindtap="selectClick4" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+</view>
+
+<view wx:if="{{type=='特殊照(单色背景)'}}">
+<view>
+  <block wx:for="{{model5}}">
+     <view class="type" bindtap="selectClick5" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+</view>
+
+<view wx:if="{{type=='纪实'}}">
+<view>
+  <block wx:for="{{model6}}">
+     <view class="type" bindtap="selectClick6" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+</view>
+
+<view wx:if="{{type=='绘图'}}">
+<view>
+  <block wx:for="{{model7}}">
+     <view class="type" bindtap="selectClick7" id="{{index}}">
+        <view class="text">
+        <text>{{item.title}}</text>
+        </view>
+        <view wx:if="{{item.selectImage==true}}">
+        <view class="selectedImage">
+        <image src="images/打勾.png"></image>
+        </view>
+        </view>
+     </view>
+  </block>
+</view>
+</view>

@@ -1,0 +1,154 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="预约"></top-bar >
+<!--正文预约选择部分-->
+<scroll-view scroll-y="true" class="Subscribe-content" style='height:1200rpx;'>
+<!--选项框1-->
+  <view class='choose-type'>
+    <view class='choose-type-image'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/SCalqJN.Csk3HMcf6gATfZ*LFO28tcLkZ8Wjp6CT3O8!/b/dDIBAAAAAAAA&bo=3wFnAQAAAAARF5g!&rf=viewer_4'></image>
+    </view>
+    <view class='choose-type-detail' bindtap='showModal'>
+      <view class='choose-type-name'>女王照(单人照)</view>
+      <view class='choose-type-select' bindtap="SelectTab"  >
+        <view class='choose-type-price' >
+          <text class='nums'>259</text>
+          <text class='upto' decode="{{true}}">&nbsp;元起</text>
+        </view>
+        <view class='select' >
+          <image wx:if="{{currentSelect==0}}" src="/pages/market/images/select.png"></image>
+          <image wx:else="{{currentSelect==1}}" src="/pages/market/images/selected.png"></image>
+        </view>
+      </view>
+    </view>  
+  </view>
+  <!--选项框2-->
+  <view class='choose-type' bindtap='showModal'>
+    <view class='choose-type-image'>
+      <image src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/*Diqp*liHN75l4RHh1Yg3vS8NJ*qpCEX9vGcAQi284o!/b/dFMBAAAAAAAA&bo=OwNsAgAAAAARB2Y!&rf=viewer_4'></image>
+    </view>
+    <view class='choose-type-detail'>
+      <view class='choose-type-name'>女王照(双人照)</view>
+      <view class='choose-type-select' bindtap="SelectTab2" >
+        <view class='choose-type-price' >
+          <text class='nums'>499</text>
+          <text class='upto' decode="{{true}}">&nbsp;元起</text>
+        </view>
+        <view class='select'>
+          <image wx:if="{{currentSelect2==0}}" src="/pages/market/images/select.png"></image>
+          <image wx:else="{{currentSelect2==1}}" src="/pages/market/images/selected.png"></image>
+        </view>
+      </view>
+    </view>  
+  </view>
+</scroll-view>
+<!--底部选择框-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}">
+<!--购物车结账-->
+  <view class="Cart">
+    <view class='pay'>需付款：0 元</view>
+    <view class='uplist' bindtap='showModal2'><image src='../../images/up.png'></image></view>
+    <view class='coupon'>已优惠：0 元</view>
+  </view>
+<!--优惠活动、选择日期-->
+  <view class="tab-content">
+    <view class="activity">
+      <text>优惠活动</text>
+    </view>
+    <view class='submit' bindtap='goToSubmission'>
+      <text>提交订单</text>
+    </view>
+  </view> 
+</view>
+
+<!--底部动画弹窗1-->
+<view class="modals modals-bottom-dialog " hidden="{{hideModal}}">
+  <view class="modals-cancel" bindtap="hideModal"></view>
+  <view class="bottom-dialog-body bottom-pos " animation="{{animationData}}">
+  <!--在此处添加内容-->
+    <view class='choose-content'>
+  <!--头部标题-->
+      <view class='choose-class'>
+        <text>女王照(单人照)</text>
+      </view>
+        <image class='close' src='/pages/market/images/close.png' bindtap='hideModal'></image>
+      <view class='leixing'>
+        <text>产品类型</text>
+      </view>
+      <view class='leixing-name'>
+        <view class='name1'>
+          <text decode='{{true}}'>&nbsp;天生合群&nbsp;</text>
+        </view>
+        <view class='name2'>
+          <text decode='{{true}}'>&nbsp;神秘莫测&nbsp;</text>
+        </view>
+      </view>
+      <view class='update'>
+        <text>升级体验</text>
+        <image src='/pages/market/images/mark.png'></image>
+      </view>
+      <view class='update-class'>
+        <view class='up1'>
+          <text decode='{{true}}'>&nbsp;四宫格&nbsp;</text>
+        </view>
+        <view class='up2'>
+          <text decode='{{true}}'>&nbsp;六宫格&nbsp;</text>
+        </view>
+         <view class='up3'>
+          <text decode='{{true}}'>&nbsp;九宫格&nbsp;</text>
+        </view>
+      </view>
+      <view class='total'>
+          <text>合计：</text>
+          <text class='nums' decode='{{true}}'>259&nbsp;</text>
+          <text>元</text>
+      </view>
+    </view>
+    <view class="confirm {{isIphoneX?'iphoneX-height':''}}" bindtap="goToDateChoose" >确定</view>
+  </view>
+</view>
+<!--底部弹窗2-->
+<view class="modals modals-bottom-dialog2" hidden="{{hideModal2}}">
+  <view class="modals-cancel2" bindtap="hideModal2"></view>
+  <view class="bottom-dialog-body2 bottom-pos2" animation="{{animationData}}">
+  <!--已选服务-->
+    <view class='selected-service'>
+      <view  class='font'>
+        <text>已选服务</text>
+      </view>
+      <view class='hideimage' bindtap='hideModal2'>
+        <image src="../../images/downto.png"></image>
+      </view>
+      <view class='clear'>
+        <image src='../../images/clear.png'></image>
+      </view>
+    </view>
+  <!--照片类型-->
+  <view class='selected-bill' wx:for="{{listtype}}">
+    <view class='selected-type'>
+      <view class='typename'>{{item.typename}}</view>
+      <view class='price'>{{item.price}}</view>
+      <view class='reduce'><image src='../../images/reduce.png'></image></view>
+      <view class='nums'>{{item.nums}}</view>
+      <view class='plus'><image src='../../images/plus.png'></image></view>
+    </view>
+    <view class='selectother'>{{item.selectother}}</view>
+  </view>  
+
+    <view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}">
+<!--购物车结账-->
+  <view class="Cart">
+    <view class='pay'>需付款：618 元</view>
+    <view class='uplist2'></view>
+    <view class='coupon'>已优惠：30 元</view>
+  </view>
+<!--优惠活动、选择日期-->
+  <view class="tab-content">
+    <view class="activity">
+      <text>优惠活动</text>
+    </view>
+    <view class='submit' bindtap='goToSubmission'>
+      <text>提交订单</text>
+    </view>
+  </view>   
+  </view>
+  </view>
+</view>

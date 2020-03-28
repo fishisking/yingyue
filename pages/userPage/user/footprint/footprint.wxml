@@ -1,0 +1,17 @@
+<!--pages/index/footprint/footprint.wxml-->
+<top-bar navH="{{navH}}" pageTitle="足迹"></top-bar>
+<view class='item'>
+    <view class='itemhead'>
+        <view class='date'>共5条记录</view>
+        <view class='background'></view>
+        <view class='delete'>
+        <image src='./images/delete.png'></image></view>
+    </view>
+
+
+  <view class='content'>
+    <view class='footprintRecord' wx:for='{{footprintlist}}' wx:key='unique'>
+    </view>
+  </view>
+
+</view>

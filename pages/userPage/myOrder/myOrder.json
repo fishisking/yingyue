@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "top-bar": "/component/TopBar/topBar",
+    "van-tabs":"/component/dist/tabs/index",
+    "van-tab":"/component/dist/tab/index",
+    "van-button": "/component/dist/button/index"
+  }
+}

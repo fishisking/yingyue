@@ -1,0 +1,113 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="Ta的主页"></top-bar >
+<scroll-view scroll-y="true" class="User-content" style='height:{{screenHeight*px2rpx-200}}rpx;'>
+<!--头部背景图片-->
+  <view class="header-background">
+    <image class="header-pic" src='https://b193.photo.store.qq.com/psb?/V13v0ZyH1ocVDW/25DCBGngM2Xs.tiz44AwQ1hij7CERfzhNjQp0emIsoc!/b/dCUmDnMrAAAA&bo=IAOAAiADgAIBCS4!&rf=viewer_4'></image>
+    <!-- <canvas canvas-id="header-background" class="label" style='width:100%;'>
+    </canvas>   -->
+  </view>
+  <!--头部标签-->
+  <view  class="label">
+    <image src='../images/label1.png' mode="aspectFit" style='height:144rpx;width:144rpx;'></image>
+  </view>
+<!--用户头像-->
+  <view class="header-icon">
+    <image src="../images/head-icon.png" mode="aspectFit"></image>
+  </view>
+<!--用户信息-->
+ 
+  <view class="user-info">
+  <view class='flex-row'>
+    <view class='user-name'>韦闻韬</view>
+  </view>
+  </view>
+   <view class='introduce'>
+  <image src='../images/pboy.png' mode="aspectFit"></image>
+  <view class="year">21岁</view>
+  </view>
+  <view class='autograph'>拍我所想 享我所拍</view>
+  <!--粉丝、反馈分、成交数、信用分、服务地-->
+  <view class='details'>
+  <!--粉丝-->
+    <view class='fans'>
+    <text class='nums'>318</text>
+    <text class='name'>粉丝</text>
+    </view>
+    <view class='cut'></view> 
+  <!--反馈分-->
+    <view class='feedback'>
+    <text class='nums'>5.0</text>
+    <text class='name'>反馈分</text>
+    </view>
+    <view class='cut'></view> 
+  <!--成交数--> 
+    <view class='deal'>
+    <text class='nums'>126</text>
+    <text class='name'>成交数</text>
+    </view> 
+    <view class='cut'></view> 
+  <!--信用分-->
+    <view class='credit'>
+    <text class='nums'>100</text>
+    <text class='name'>信用分</text>
+    </view> 
+    <view class='cut'></view> 
+  <!--服务地-->
+    <view class='place'>
+    <text class='location'>杭州</text>
+    <text class='name'>服务地</text>
+    </view>   
+  </view>
+  <!--服务、作品、评价-->
+<view class='selectTab'>
+  <view class='flex-row'>
+    <view class="selectservice {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    服务
+      <view class='onTabLine' wx:if="{{currentTab==0}}"></view>
+    </view>
+    <view class="works {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+    作品
+      <view class='onTabLine' wx:if="{{currentTab==1}}"></view>
+    </view>
+    <view class="review {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+    评价
+      <view class='onTabLine' wx:if="{{currentTab==2}}"></view>
+    </view>
+  </view>
+</view>
+<!--可选服务-->
+<!--写真套餐-->
+<view class="set" wx:if="{{currentTab==0}}">
+  <view class='set-header'>
+    <view class='set-name'>
+    <text>写真套系A</text>
+    </view>
+    <view class='set-price'>
+    <text>600元</text>
+    </view>
+    <view class='set-type'>
+    <text class='typec' decode="{{true}}">&nbsp;服务内容&nbsp;</text>
+    </view>
+  </view>
+  <!--图片素材-->
+  <view class='images-display'>
+    <navigator wx:for="{{roomList}}"  class="show-list">
+     <image src="{{item.url}}"/>          
+    </navigator>
+  </view>
+</view>
+</scroll-view>
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}">
+  <view class="tab-content">
+    <view class="letter">
+      <text>私信</text>
+    </view>
+    <view class='viewer'>
+      <text>关注</text>
+    </view>
+    <view class='book'>
+      <text>预约</text>
+     </view>
+  </view> 
+</view>

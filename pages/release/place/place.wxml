@@ -1,0 +1,7 @@
+<top-bar navH="{{navH}}" pageTitle="拍摄地点"></top-bar>
+<view class="search">
+<view class="searchfield">
+  <image src="images/search.png" class="search-icon"></image>
+  <input placeholder='搜索地点'></input>
+</view>
+</view>

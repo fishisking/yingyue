@@ -1,0 +1,46 @@
+<!--pages/message/dianzanmessage/dianzanmessage.wxml-->
+<!--头部导航栏-->
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="点赞"></top-bar >
+<!--分割线-->
+<view class="divLine"></view>
+<scroll-view scroll-y="true"  style='height:{{screenHeight*px2rpx+400}}rpx;'>
+  <!--点赞主体示例1-->
+  <view class='dianzan-item'>
+    <!--点赞者头像-->
+    <view class='myicon'>
+      <image src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/KW7bqNccTCbR.VAfibjMVk.t73X1teroSRHIc64w4MA!/b/dL8AAAAAAAAA&bo=5AHkAQAAAAADByI!&rf=viewer_4'></image>
+    </view>
+    <!--点赞通知文本内容--> 
+    <view class='content'>
+      <view class='username'>许文豪</view>
+      <view class='zan'>赞了你的作品</view>
+      <view class='lasttime'>18小时前</view>
+    </view>
+
+    <!--点赞的图片--> 
+    <view class='pic'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/teBvLGFzpEU5WTwqjNX3WIZOSKwS8dwOqG*IhPB3Ry8!/b/dMUAAAAAAAAA&bo=SwPVAQAAAAADR*4!&rf=viewer_4' mode='widthFix'></image>
+    </view>  
+  </view>
+  <!--小分割线-->
+  <view class='little-divLine'></view> 
+  
+  <!--点赞主体示例2-->  
+  <view class='dianzan-item'>
+    <view class='myicon'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/qCcTrvBXkMH2Nk2UtdzZh4BrrfBksbCwuKfbFHEI2Qw!/b/dLgAAAAAAAAA&bo=4wHkAQAAAAADJwU!&rf=viewer_4'></image>
+    </view>
+
+    <view class='content'>
+      <view class='username'>许文豪</view>
+      <view class='zan'>赞了你的作品</view>
+      <view class='lasttime'>22小时前</view>
+    </view>
+
+    <view class='pic'>
+      <image src='http://m.qpic.cn/psb?/V13v0ZyH4cNwhs/rYKLdHoemV2lonElr3jvwT4zMfYDPAe9d8XS2pVMjtQ!/b/dMAAAAAAAAAA&bo=egk4BAAAAAADdx0!&rf=viewer_4' mode='widthFix'></image>
+    </view>  
+  </view>
+  <view class='little-divLine'></view> 
+  
+</scroll-view>

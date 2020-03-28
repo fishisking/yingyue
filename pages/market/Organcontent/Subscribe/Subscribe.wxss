@@ -1,0 +1,381 @@
+/*模块整体布局*/
+.choose-type{
+  display: flex;
+  flex-direction: row;
+  border-bottom: #FFFFFF 1px solid;
+  height: 280rpx;
+}
+/*照片*/
+.choose-type-image image{
+  width: 300rpx;
+  height: 225rpx;
+  box-shadow: 4rpx 6rpx 6rpx #CDCDCD;
+  border-radius: 20rpx;
+  margin-left: 34rpx;
+  margin-top: 50rpx;
+}
+/*详情名称、价格和选中框垂直分布*/
+.choose-type-detail{
+  display: flex;
+  flex-direction: column;
+}
+/*服务类型名称*/
+.choose-type-name{
+  width: 300rpx;
+  height: 120rpx;
+  font-size: 40rpx;
+  /* font-weight: 500; */
+  margin-left: 40rpx;
+  margin-top: 50rpx;
+}
+/*水平分布*/
+.choose-type-select{
+  display: flex;
+  flex-direction: row;
+}
+.choose-type-price {
+  color: #4074dd;
+  height: 100rpx;
+  width: 250rpx;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  font-weight: 500;
+}
+.choose-type-price .nums{
+  font-size: 48rpx;
+}
+.choose-type-price .upto{
+  font-size: 30rpx;
+}
+/*选择*/
+.select{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 55rpx;
+  margin-left: 40rpx;
+}
+.select image{
+  width:40rpx;
+  height: 40rpx;
+}
+.selected{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 55rpx;
+  margin-left: 40rpx;
+}
+.selected image{
+  width:40rpx;
+  height: 40rpx;
+}
+/*底部选择框*/
+.bottom-tab{
+  display: flex;
+  flex-direction: column;
+  bottom:0;
+  height: 218rpx;
+  width: 100%;
+  /* background: linear-gradient(to right, #5594ff , #3bc3ff); */
+  position: fixed;
+  z-index: 9999;
+}
+.bottom-tab.iphoneX-height{
+    padding-bottom: 20rpx;
+    background: linear-gradient(to right, #5594ff , #3bc3ff);
+}
+/*结账*/
+.Cart{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: #ffffff;
+  height: 100rpx;
+  font-size: 32rpx;
+  /* font-weight: 500; */
+}
+.Cart .pay{
+  
+  margin-top: 30rpx;
+  width: 40%;
+  text-align: left;
+  margin-left: 44rpx;
+}
+.uplist{
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+  /* width: %; */
+}
+.uplist image{
+  /* margin-left: 90rpx; */
+  width: 50rpx;
+  height: 50rpx;
+}
+.Cart .coupon{
+  margin-top: 30rpx;
+  width: 40%;
+  text-align: right;
+  margin-right: 44rpx;
+}
+/*优惠活动、选择日期*/
+.tab-content{
+  bottom: 0;
+  height: 118rpx;
+  background:linear-gradient(to right, #5594ff , #3bc3ff);
+  flex-direction: row;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+}
+.activity,.submit{
+  margin-top: 30rpx;
+  color: #ffffff;
+  font-size: 36rpx;
+  width:400rpx;
+  text-align: center;
+}
+/*模态框*/
+.modals-cancel {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+ 
+.bottom-dialog-body {
+  position: fixed;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 690rpx;
+  background-color: #fff;
+}
+ 
+/*动画前初始位置*/
+ 
+.bottom-pos {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+ 
+.confirm {
+  width: 100%;
+  height: 100rpx;
+  z-index: 9999;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  border-radius: 0;
+  border: 0;
+  color: #fff;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  background: linear-gradient(to right, #5594ff , #3bc3ff);
+}
+.confirm.iphoneX-height{
+    padding-bottom: 20rpx;
+}
+/*头部标题*/
+.choose-content{
+  display: flex;
+  flex-direction: column;
+}
+.choose-class{
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+}
+.close{
+  width:40rpx;
+  height: 40rpx;
+  position: relative;
+  bottom: 40rpx;
+  left: 680rpx;
+
+  /* margin-left: 200rpx;
+  margin-top: 10rpx; */
+} 
+.leixing{
+  margin-top: 10rpx;
+  text-align: left;
+  margin-left: 30rpx;
+  font-size: 34rpx;
+}
+.leixing-name{
+  display: flex;
+  flex-direction: row;
+  font-size: 34rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+.name1{
+  width: 160rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  border: 1px #4074dd solid;
+  background: #4074dd;
+  text-align: center;
+}
+.name1 text{
+  color: #fff;
+}
+.name2{
+  margin-left: 50rpx;
+  width: 160rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  border: 1px #4074dd solid;
+  text-align: center;
+}
+.name2 text{
+  color: #4074dd;
+}
+
+/*升级体验*/
+.update{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  text-align: left;
+  margin-left: 30rpx;
+  font-size: 34rpx;
+}
+.update image{
+  margin-top: 6rpx;
+  margin-left: 20rpx;
+  width:34rpx;
+  height: 34rpx;
+}
+.update-class{
+  display: flex;
+  flex-direction: row;
+  font-size: 34rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  color: #4074dd
+}
+.up1{
+  width: 126rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  border: 1px #4074dd solid;
+  text-align: center;
+}
+.up2,.up3{
+  width: 126rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  border: 1px #4074dd solid;
+  text-align: center;
+  margin-left: 50rpx;
+}
+/*合计*/
+.total{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-size: 38rpx;
+}
+.total .nums{
+  color: #4074dd;
+  font-size: 52rpx;
+}
+/*底部弹窗动画2*/
+.modals-cancel2 {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+ 
+.bottom-dialog-body2 {
+  position: fixed;
+  z-index: 10001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 700rpx;
+  background-color: #fff;
+}
+ 
+/*动画前初始位置*/
+ 
+.bottom-pos2 {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.uplist2{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/*已选服务*/
+.selected-service{
+  width: 100%;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+}
+.selected-service image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.selected-service .font{
+  font-size: 44rpx;
+  color: #666666;
+  margin-left: 40rpx;
+  width: 280rpx;
+}
+.selected-service .hideimage{
+  width:200rpx;
+  margin-left: 30rpx;
+}
+.selected-service .clear{
+  width: 60rpx;
+  margin-left: 110rpx;
+}
+/*账单*/
+.selected-bill{
+  display: felx;
+  flex-direction: column;
+  margin-top: 40rpx;
+  margin-left: 44rpx;
+}
+.selected-bill image{
+  margin-top: 10rpx;
+  width:  40rpx;
+  height: 40rpx;
+}
+.selected-bill .selected-type{
+  font-size: 40rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.typename{
+  width: 350rpx;
+}
+.selected-type .price{
+  width:200rpx;
+  text-align: center;
+  color: #4074dd;
+}
+.selected-type .reduce,.selected-type .plus{
+  height: 40rpx;
+  width: 40rpx;
+}
+.selected-type .nums{
+  width: 40rpx;
+  text-align: center
+}
+.selectother{
+  margin-top: 18rpx;
+  font-size: 30rpx;
+  color: #666666;
+}

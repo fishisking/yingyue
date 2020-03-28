@@ -1,0 +1,50 @@
+/* pages/userPage/userBox/setting/setting.wxss */
+
+.contain{
+  margin-top: 20rpx;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  border-bottom: #f2f2f2;
+  border-bottom-style: solid;
+  border-width: 1rpx;
+  height: 120rpx;
+  font-size: 40rpx;
+  width: 100%;
+}
+
+
+.item .itemTitle{
+  line-height: 40rpx;
+  margin-top: 40rpx;
+  margin-left: 60rpx;
+}
+
+
+.item image{
+  width: 20rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 60rpx;
+  margin-top: 40rpx;
+}
+
+.button{
+  height: 120rpx;
+  width: 100%;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  border-radius: 18rpx;
+  background-color: #4074dd;
+  color: white;
+  text-align: center;
+  line-height: 120rpx;
+}
+
+.buttonitem{
+  width: 100%;
+  display: flex;
+  margin-top: 40rpx;
+}

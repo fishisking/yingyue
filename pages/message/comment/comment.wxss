@@ -1,0 +1,113 @@
+/* pages/message/comment/comment.wxss */
+/*分割线样式*/
+.divLine{
+ background: #cacaca;
+ width: 100%;
+ height: 3rpx;
+}
+.little-divLine{
+  background: #cacaca;
+  width: 595rpx;
+  height: 1rpx;
+  float: right;
+}
+
+/*评论主体样式*/
+.comment-item{
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  height: 265rpx;
+}
+/*评论者头像*/
+.comment-item .myicon{
+  flex-grow: 1;
+  padding-left: 24rpx;
+  padding-top: 24rpx;
+}
+.comment-item .myicon image{
+  align-items: center;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 80rpx;
+}
+/*评论的文本内容*/
+.comment-item .content{
+  flex-grow: 3;
+  padding-top: 30rpx;
+}
+.comment-item .content .username{
+  font-size: 36rpx;
+  color: black;
+  margin-left: -10rpx;  
+  font-weight: 500;
+}
+.comment-item .content .comment{
+  font-size: 32rpx;
+  color: black;
+  margin-top: 8rpx;
+  margin-left: -10rpx;  
+  font-weight: 500;
+}
+.comment-item .content .target{
+   font-size: 32rpx;
+  color: #4074dd;
+  margin-top: 8rpx;
+  margin-left: 15rpx;  
+  font-weight: 500;
+}
+.comment-item .content .replyer{
+   font-size: 32rpx;
+  color: #494949;
+  margin-top: 8rpx;
+  margin-left: -10rpx;  
+  font-weight: 500;
+}
+.comment-item .content .lasttime{
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 35rpx;
+  margin-left: -10rpx;  
+}
+
+/*评论的图片以及回复*/
+.comment-item .pic{
+  flex-grow: 2;
+  padding-top: 24rpx;
+  padding-right: 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+.comment-item .pic .test{
+  flex-grow: 1;
+  padding-top: 5rpx;
+}
+.comment-item .pic .test image{
+  width:200rpx;
+  float: right;
+}
+.comment-item .pic .space{
+  flex-grow: 2;
+  float: right;
+  width:100rpx;
+}
+.comment-item .pic .reply{
+  flex-grow: 1;
+  width:100rpx;
+  position: relative;
+  right: -160rpx;
+}
+.comment-item .pic .reply .picture{
+  position: relative;
+  left: -15rpx;
+}
+.comment-item .pic .reply .picture image{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+.comment-item .pic .reply .txt{
+  font-size: 28rpx;
+  color: #949494;
+  float: right;
+}

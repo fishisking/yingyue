@@ -1,0 +1,431 @@
+<!--pages/userPage/serviceOrder/serviceOrder.wxml-->
+<top-bar navH="{{navH}}" pageTitle="我的订单"></top-bar>
+
+
+
+<van-tabs active="{{pagenum}}" bind:change="onChange" wx:if="{{userType=='servicer'}}" data-index='{{item.index}}'>
+    <van-tab
+      title="全部"
+    >
+    <!--单个tab内容-->
+      <!--单个项目-->
+      <view class='contain'  >
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" bindtap='getspecificPage'>
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+
+
+    <van-tab
+      title="待完成"
+      info="{{completingInfo}}"
+
+      wx:if="{{true}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待完成'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+
+    <van-tab
+      title="待反馈"
+      info="{{feedbackInfo}}"
+
+      wx:if="{{true}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待反馈'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab
+      title="售后"
+      info="{{aftermarketInfo}}"
+
+      wx:if="{{true}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='售后'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+
+
+
+<!--不是servicer页面-->
+
+<van-tabs active="{{pagenum}}" bind:change="onChange" wx:else>
+    <van-tab
+      title="全部"
+    >
+    <!--单个tab内容-->
+      <!--单个项目-->
+      <view class='contain'>
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" bindtap='getspecificPage' data-index='{{item.index}}'>
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+
+
+    <van-tab
+      title="待付款"
+      info="{{payInfo}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待付款'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+
+    <van-tab
+      title="待完成"
+      info="{{completingInfo}}"
+
+      wx:if="{{true}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待完成'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+
+    <van-tab
+      title="待反馈"
+      info="{{feedbackInfo}}"
+
+      wx:if="{{true}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='待反馈'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+
+    <van-tab
+      title="售后"
+      info="{{aftermarketInfo}}"
+
+      wx:if="{{true}}"
+    >
+      <view class="contain">
+        <view class='item' wx:for="{{orderList}}" wx:key="unique" wx:if="{{item.status=='售后'}}">
+          <view class='itemhead'>
+            <view class='object'>
+              <image src='{{item.objecthead}}'></image>
+              <view class='name'>{{item.objectname}}</view>
+            </view>
+            <view class='type'>{{item.status}}</view>
+          </view>
+
+
+          <view class='content'>
+            <view class='cover'><image src='{{item.imgUrl}}' mode='aspectFill'></image></view>
+            <view class='detail'>
+              <view class='name'>{{item.ordername}}</view>
+              <view class='type'>{{item.style}}</view>
+              <view class='price'>￥{{item.price}}</view>
+            </view>
+          </view>
+        
+          <view class="itembottom{{item.serviceType=='租赁类'?'Two':''}}">
+            <view class='datetitle' wx:if="{{item.serviceType=='服务类'}}">完成时间</view>
+            <view class='datecontent' wx:if="{{item.serviceType=='租赁类'}}">
+              <view class='startdate'>
+                <view class='datetitle'>起租时间</view>
+                <view class="date">{{item.startdate}}</view>
+              </view>
+              <view class='finishdate'>
+                <view class='datetitle'>归还时间</view>
+                <view class="date">{{item.finishdate}}</view>
+              </view>
+            </view>
+            <view class="date">{{item.date}}</view>
+            <van-button type="info" size="mini" plain hairline round class="{{item.serviceType=='租赁类'?'lensebutton':'servicebutton'}}">取消订单</van-button >
+
+          </view>
+        </view>
+      </view>
+    </van-tab>
+  </van-tabs>
+
+

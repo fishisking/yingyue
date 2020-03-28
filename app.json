@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/search/search",
+    "pages/index/content/content",
+    "pages/index/content/comment/comment",
+
+
+    "pages/release/release",
+    "pages/release/terms/terms",
+    "pages/release/identity/identity",
+    "pages/release/type/type",
+    "pages/release/style/style",
+    "pages/release/photographer/photographer",
+    "pages/release/place/place",
+    "pages/release/topic/topic",
+
+        "pages/message/message",
+        "pages/message/comment/comment",
+        "pages/message/Systemmessage/sysmessage",
+        "pages/message/dianzanmessage/dianzanmessage",
+        "pages/message/Myconcern/myconcern",
+        "pages/message/contact/contact",
+
+    "pages/market/market",
+    "pages/market/Photographercontent/content",
+    "pages/market/Usercontent/content",
+    "pages/market/Organcontent/content",
+    "pages/market/Organcontent/Subscribe/Subscribe",
+    "pages/market/Organcontent/Servicedetails/details",
+    "pages/market/Organcontent/Introduce/Introduce",
+    "pages/market/Organcontent/DateChoose/Date/Date",
+    "pages/market/Organcontent/DateChoose/Time/Time",
+    "pages/market/Organcontent/Submission/Submission",
+    "pages/market/Servicecontent/content",
+
+        "pages/userPage/index",
+        "pages/logs/logs",
+        "pages/userPage/user/fans/fans",
+        "pages/userPage/user/footprint/footprint",
+        "pages/userPage/user/interests/interests",
+        "pages/userPage/user/works/works",
+        "pages/userPage/myOrder/myOrder",
+        "pages/userPage/serviceOrder/serviceOrder",
+        "pages/userPage/photographerOrder/photographerOrder",
+        "pages/userPage/userBox/setting/setting",
+        "pages/userPage/userBox/attestation/attestation",
+        "pages/userPage/userBox/card/card",
+        "pages/userPage/userBox/watermark/watermark",
+        "pages/userPage/myOrder/specificOrder/specificOrder",
+        "pages/userPage/serviceOrder/specificOrder/specificOrder"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
+    
+  },
+  "tabBar": {
+    "backgroundColor": "#F2F2F2",
+    "color": "#CDCDCD",
+    "selectedColor": "#4074DD",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "tabbarComponent/icon/home.png",
+        "selectedIconPath": "tabbarComponent/icon/home_sl.png"
+      },
+      {
+        "pagePath": "pages/market/market",
+        "text": "服务",
+        "iconPath": "tabbarComponent/icon/market.png",
+        "selectedIconPath": "tabbarComponent/icon/market_sl.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "tabbarComponent/icon/message.png",
+        "selectedIconPath": "tabbarComponent/icon/message_sl.png"
+      },
+      {
+        "pagePath": "pages/userPage/index",
+        "text": "我的",
+        "iconPath": "tabbarComponent/icon/mine.png",
+        "selectedIconPath": "tabbarComponent/icon/mine_sl.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

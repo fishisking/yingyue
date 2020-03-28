@@ -1,0 +1,69 @@
+/* pages/message/Systemmessage/sysmessage.wxss */
+.divLine{
+ background: #cacaca;
+ width: 100%;
+ height: 3rpx;
+}
+
+
+/*系统通知主体*/
+.message-item{
+  min-height: 100rpx;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+}
+.message-item .pic{
+  flex-grow: 1;
+  padding-left: 24rpx;
+  padding-top: 54rpx;
+}
+.message-item .pic image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.message-item .txt{
+  flex-grow: 4;
+  padding-top: 54rpx;
+  padding-bottom: 17rpx;
+}
+
+.message-item .txt .title {
+  font-size: 30rpx;
+  color: black;
+  font-weight: 600;
+  line-height: 45rpx;
+  margin-bottom: 34rpx;
+}
+.message-item .txt .lasttime{
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.message-item .link{
+  flex-grow: 2;
+  
+}
+.message-item .link image{
+  height: 34rpx;
+  width: 34rpx;
+  float: right;
+  padding-right: 24rpx;
+  padding-top: 24rpx;
+}
+.message-item .link .link-txt{
+  font-size: 34rpx;
+  color: #4074dd;
+  float: right;
+  position: relative;
+  bottom: -108rpx;
+  padding-right: 24rpx;
+}
+.message-item .link .dingdan-txt{
+  font-size: 34rpx;
+  color: #4074dd;
+  float: right;
+  position: relative;
+  bottom: -65rpx;
+  padding-right: 24rpx;
+}

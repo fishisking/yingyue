@@ -1,0 +1,50 @@
+<top-bar navH="{{navH}}" pageTitle="选择话题"></top-bar>
+<!--搜索框-->
+<view class="search">
+<view class="searchfield">
+  <image src="images/search.png" class="search-icon"></image>
+  <input placeholder='选择话题'></input>
+</view>
+</view>
+<!--最近使用框-->
+<view class="use">
+最近使用
+<image src="images/删除.png"></image>
+</view>
+<view class="recenty">
+<view class="text1">
+  <image src="images/井号.png" class="recenty-icon"></image>
+  <text>人像摄影大赛</text>
+</view>
+<view class="text2">
+  <image src="images/井号.png" class="recenty-icon"></image>
+  <text>非人像摄影大赛</text>
+</view>
+</view>
+<view class="recenty2">
+<view class="text3">
+  <image src="images/井号.png" class="recenty-icon"></image>
+  <text>纪实30天</text>
+</view>
+</view>
+<!--选择框-->
+<view class="choose">
+<image src="images/井号.png"></image>
+人像摄影大赛
+</view>
+<view class="choose">
+<image src="images/井号.png"></image>
+非人像摄影大赛
+</view>
+<view class="choose">
+<image src="images/井号.png"></image>
+纪实30天
+</view>
+<view class="choose">
+<image src="images/井号.png"></image>
+海马体日记
+</view>
+<view class="choose">
+<image src="images/井号.png"></image>
+我的全家福
+</view>

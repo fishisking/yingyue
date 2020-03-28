@@ -1,0 +1,129 @@
+<top-bar navH="{{navH}}" catchtouchmove="true" pageTitle="Ta的主页"></top-bar >
+<scroll-view scroll-y="true" class="User-content" style='height:{{screenHeight*px2rpx-200}}rpx;'>
+<!--头部背景图片-->
+  <view class="header-background">
+    <image class="header-pic" src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/WsfHwxUJOyLDNBLNFy96QClBULMc.xFJKANaNwFQ9ns!/b/dL8AAAAAAAAA&bo=WAJSAQAAAAARBzk!&rf=viewer_4'></image>
+  </view>
+  <!--头部标签-->
+  <view  class="label">
+    <image src='../images/label3.png' mode="aspectFit" style='height:144rpx;width:144rpx;'></image>
+  </view>
+<!--用户头像-->
+  <view class="header-icon">
+    <image src="../images/head-icon.png" mode="aspectFit"></image>
+  </view>
+<!--用户信息-->
+ <view class="user-info">
+  <view class='flex-row'>
+    <view class='user-name'>专业相机租赁</view>
+  </view>
+</view>
+<view class='introduce'>
+  <view class='location'>
+    <image src='../images/location.png' mode="aspectFit"></image>
+    <view class="location-name">杭州市上城区</view>
+  </view>
+  <view class='phone'>
+    <text decode='{{true}}'>&nbsp;</text>
+    <image src='../images/call2.png' mode='aspectFit'></image>
+    <text class='makephone' decode="{{true}}">&nbsp;呼叫&nbsp;</text>
+  </view>
+</view>
+  <!--粉丝、反馈分、成交数、信用分-->
+  <view class='details'>
+  <!--粉丝-->
+    <view class='fans'>
+    <text class='nums'>212</text>
+    <text class='name'>粉丝</text>
+    </view>
+    <view class='cut'></view> 
+  <!--反馈分-->
+    <view class='feedback'>
+    <text class='nums'>5.0</text>
+    <text class='name'>反馈分</text>
+    </view>
+    <view class='cut'></view> 
+  <!--成交数--> 
+    <view class='deal'>
+    <text class='nums'>56</text>
+    <text class='name'>成交数</text>
+    </view> 
+    <view class='cut'></view> 
+  <!--信用分-->
+    <view class='credit'>
+    <text class='nums'>100</text>
+    <text class='name'>信用分</text>
+    </view> 
+  </view>
+  <!--可选服务、作品、评价-->
+<view class='selectTab'>
+  <view class='flex-row'>
+    <view class="activity {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+    首页
+      <view class='onTabLine' wx:if="{{currentTab==0}}"></view>
+    </view>
+    <view class="selectservice {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+    服务
+      <view class='onTabLine' wx:if="{{currentTab==1}}"></view>
+    </view>
+    <view class="review {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+    评价
+      <view class='onTabLine' wx:if="{{currentTab==2}}"></view>
+    </view>
+  </view>
+</view>
+<!--首页内容-->
+<view class="index" wx:if="{{currentTab==0}}">
+<!--首页活动-->
+<view class="index-content">
+  <!--图片素材-->
+  <view class='images-display'>
+    <navigator wx:for="{{roomList}}"  class="show-list">
+     <image src="{{item.url}}"/>          
+    </navigator>
+  </view>
+</view>
+</view>
+
+<!--租赁设备服务内容-->
+<view class="set" wx:if="{{currentTab==1}}">
+<!--租赁设备1-->
+  <view class='set-content'>
+  <!--设备图片-->
+    <view class='set-images'><image src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/p2OqEdNVEfJwLK*AnBAjBPqbfpIsQjvmewqwbvNUgNg!/b/dL8AAAAAAAAA&bo=7gLjAQAAAAARBz4!&rf=viewer_4'></image></view>
+    <view class='set-details'>
+      <view class='set-name'>佳能 EOS 800D</view>
+      <view class='set-price'>
+        <text>49元/天</text>
+        <image src="../images/right.png"></image>
+      </view>
+    </view>
+  </view>
+   <!--租赁设备2-->
+  <view class='set-content'>
+  <!--设备图片-->
+    <view class='set-images'><image src='https://m.qpic.cn/psb?/V13v0ZyH4cNwhs/tL2VW552GJArdjYPJ6gy5KJO8XjDrwL4mt0izpzLKJo!/b/dL8AAAAAAAAA&bo=qgESAQAAAAADB5o!&rf=viewer_4'></image></view>
+    <view class='set-details'>
+      <view class='set-name'>尼康 D750单反</view>
+      <view class='set-price'>
+        <text>99元/天</text>
+        <image src="../images/right.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+<!--底部导航-->
+<view class="bottom-tab {{isIphoneX?'iphoneX-height':''}}" >
+  <view class="tab-content">
+    <view class="letter">
+      <text>私信</text>
+    </view>
+    <view class='viewer'>
+      <text>关注</text>
+    </view>
+    <view class='book'>
+      <text>预约</text>
+     </view>
+  </view> 
+</view>

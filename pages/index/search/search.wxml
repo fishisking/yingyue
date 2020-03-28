@@ -1,0 +1,40 @@
+<!--pages/index/search/search.wxml-->
+<top-bar navH="{{navH}}" style="margin-bottom:15rpx;"></top-bar>
+<view class="header">
+  <view class="searchfield" bindtap="openSearch" >
+    <image src="../images/search.png" class="search-icon"></image>
+    <input placeholder='搜索影约内容'></input>
+  </view>
+  <view class="select-tab"catchtouchmove='true'>
+    <view class="flex-row">
+      <view class="select-tab-text {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">
+        综合
+      </view>
+      <view class="select-tab-text {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+        作品
+      </view>
+      <view class="select-tab-text {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">
+        用户
+      </view>
+    </view>
+    <view class='onTabLine' style="margin-left:{{9+33.3*currentTab}}%"></view>
+    <view class='line'></view>
+  </view>
+</view>
+<view class="content">
+  <view class="hot-search-title">热门搜索</view>
+  <view class="hot-search-area">
+    <view wx:for="{{hotWords}}" class="hot-search-area-word">
+      {{item}}
+    </view>
+  </view>
+  <view class='line' style="margin-top:18rpx;width:90%;"></view>
+  <view class="history-title">历史记录</view>
+  <view class="history-area">
+    <view wx:for="{{historyWords}}" class="flex-row" style="align-items:center;margin-bottom:20rpx;">
+      <image class="time-icon" src="../images/time.png"></image>
+      <view class="history-area-word">{{item}}</view>
+      <image class="delete-icon" src="../images/no.png"></image>
+    </view>
+  </view>
+</view>

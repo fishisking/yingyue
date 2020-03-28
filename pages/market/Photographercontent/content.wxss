@@ -1,0 +1,226 @@
+/*头部标签*/
+.User-content{
+  display: flex;
+}
+.label{
+  z-index: 1;
+  margin-top: -432rpx;
+  margin-left:610rpx;
+}
+/*头部背景图片*/
+.header-pic{
+  width: 100%;
+  height: 420rpx;
+  z-index: 1;
+}
+/*用户信息样式*/
+.flex-row{
+  flex-direction: row;
+  display: flex;
+}
+.header-icon{
+  display: flex;           
+  justify-content: center;
+  z-index: 1;   
+}
+.header-icon image{
+  margin-top: 294rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 80rpx; 
+}
+.user-info{
+  display: flex;           
+  justify-content: center;
+  z-index: 1; 
+}
+.user-info .user-name{
+  margin-top: 16rpx;
+  font-size: 40rpx;
+  color:#303030;
+  font-weight: 500;
+}
+.introduce {
+  display: flex;           
+  justify-content: center;
+  margin-top: 15rpx; 
+  }
+.introduce image{
+  width: 85.7rpx;
+  height: 40rpx;
+}
+.introduce .year{
+  font-size: 34rpx;
+  color: #6852fd;
+  margin-left: 30rpx;
+  margin-top: -3rpx;
+}
+
+/*个性签名*/
+.autograph{
+  display: flex;           
+  justify-content: center;
+  color: #8c8c8c;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
+/*粉丝、反馈分、成交数、信用分、服务地*/
+.details{
+  flex-direction: row;
+  display: flex;
+  margin-top: 16rpx;
+}
+.details .cut{
+  width: 2rpx;
+  height: 32rpx;
+  background-color: #f2f2f2;
+  margin-top: 44rpx;
+}
+.details .nums{
+  font-size: 32rpx;
+  color: #303030;
+  text-align: center;
+}
+.details .location{
+  font-size: 32rpx;
+  color: #303030;
+  text-align: center;
+}
+.details .name{
+  font-size: 24rpx;
+  color: #8c8c8c;
+  text-align: center;
+}
+.fans{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 45rpx;
+  margin-right: 32rpx;
+}
+.feedback{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 32rpx;
+  margin-right: 31rpx;
+} 
+.deal{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 32rpx;
+  margin-right: 31rpx;
+} 
+.credit{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 32rpx;
+  margin-right: 31rpx;
+} 
+.place{
+  flex-direction: column;
+  display: flex;
+  width: 80rpx;
+  margin-left: 32rpx;
+}
+/*服务、作品、评价*/
+.onTabLine{
+  width: 120rpx;
+  height: 5rpx;
+  background-color:#6852fd;
+  margin-top:15rpx;
+}
+.selectTab{
+  margin-top: 36rpx; 
+}
+.selectservice,.works,.review{
+  display: flex;
+  flex-direction: column;
+  font-size: 36rpx;
+  color:#aeaeae;
+  width: 200rpx;
+  align-content: center;
+  align-items: center;
+}
+.selectservice{
+  margin-left: 88rpx;
+}
+.active{
+  color:#6852fd;
+}
+/*套餐系列样式*/
+.set-header{
+  flex-direction: row;
+  display: flex;
+  margin-top: 40rpx;
+}
+.set-name{
+  font-size: 32rpx;
+  color: #303030;
+  font-weight: 500;
+  margin-left: 80rpx;
+  width: 200rpx;
+}
+.set-price{
+  font-size: 32rpx;
+  color: #ffa942;
+  font-weight: 500;
+  width: 190rpx;
+  margin-left: 70rpx;
+}
+.set-type{
+  font-size: 28rpx;
+  color: #aeaeae;
+  font-weight: 500;
+}
+.set-type .typec{
+  border:2rpx #aeaeae solid;
+  border-radius: 10rpx;
+}
+/*套餐中图片的展示*/
+.images-display{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20rpx;
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+}
+.show-list image{
+  margin-top: 20rpx;
+  width: 300rpx;
+  height: 225rpx;
+  box-shadow: 4rpx 6rpx 6rpx #CDCDCD;
+  background: #aeaeae;
+  border-radius: 20rpx;
+  position: relative;
+} 
+/*底部导航*/
+/*私信、关注、预约*/
+.bottom-tab{
+  bottom:0;
+  height: 118rpx;
+  width: 100%;
+  background: linear-gradient(to right, #6852fd , #5a86ff);
+  position: fixed;
+  z-index: 9999;
+}
+.bottom-tab.iphoneX-height{
+    padding-bottom: 30rpx;
+}
+.tab-content{
+  flex-direction: row;
+  display: flex;
+  justify-content:center;
+  align-content: center;
+}
+.letter,.viewer,.book{
+  margin-top: 30rpx;
+  color: #ffffff;
+  font-size: 36rpx;
+  width:200rpx;
+  text-align: center;
+}
+

@@ -1,0 +1,103 @@
+<top-bar navH="{{navH}}" pageTitle="发布作品"></top-bar>
+<!--顶部标题框-->
+<view class="writetitle">
+ <input placeholder='给你的作品写个标题吧！'></input>
+</view>
+<!--身份选择框-->
+<view class="choose" bindtap='goToIdentityPage'>
+<view class="text1">
+您的身份
+</view>
+<view class="text2">
+<view class="answer"><text>{{identity}}</text></view>
+  <image src="images/箭头.png" class="Image"></image>
+</view>
+</view>
+<!--选择类型框-->
+<view class="choose" bindtap='goToTypePage'>
+<view class="text1">
+选择类型
+</view>
+<view class="text2">
+<view class="answer"><text>{{type}}</text></view>
+  <image src="images/箭头.png" class="Image"></image>
+</view>
+</view>
+<!--具体风格框-->
+<view class="choose" bindtap='goToStylePage'>
+<view class="text1">
+具体风格
+</view>
+<view class="text2">
+<view class="answer"><text>{{style}}</text></view>
+  <image src="images/箭头.png" class="Image"></image>
+</view>
+</view>
+<!--分享内心框-->
+<view class="mood">
+ <input placeholder='分享一下你的内心吧！'></input>
+</view>
+<!--话题框-->
+<view class="topic" bindtap='goToTopicPage'>
+<image src="images/话题.png"></image>
+</view>
+<!--上传照片框-->
+<view class="photo">
+<image src="images/上传照片.png"></image>
+</view>
+<!--水印框-->
+<view class="watermark">
+<view class="text">
+个性水印
+</view>
+<view class="Image">
+<image src="images/开关2.png"></image>
+</view>
+</view>
+<!--作品摄影师选择框-->
+<view class="choose" bindtap='goToPhotographerPage'>
+<view class="text1">
+作品摄影师（选填）
+</view>
+<view class="text2">
+<view class="answer"><text></text></view>
+  <image src="images/箭头.png" class="Image"></image>
+</view>
+</view>
+<!--拍摄地点选择框-->
+<view class="choose" bindtap='goToPlacePage'>
+<view class="text1">
+拍摄地点（选填）
+</view>
+<view class="text2">
+<view class="answer"><text></text></view>
+  <image src="images/箭头.png" class="Image"></image>
+</view>
+</view>
+<!--拍摄设备框-->
+<view class="equipment">
+<view class="text">
+拍摄设备
+</view>
+<view class="name">
+ <input placeholder='请输入拍摄设备（选填）'></input>
+</view>
+</view>
+<!--作品条款框-->
+<view class="terms">
+<view class="text1">
+同意
+</view>
+<navigator url="../../pages/release/terms/terms">
+<view class="text2">
+《发布作品条款》
+</view>
+</navigator>
+<view class="imagesiez">
+<image src="images/开关2.png"></image>
+</view>
+</view>
+<!--发布作品框-->
+<view class="publish">
+发布作品
+</view>

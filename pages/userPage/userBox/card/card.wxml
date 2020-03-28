@@ -1,0 +1,34 @@
+<!--pages/userPage/userBox/card/card.wxml-->
+
+<top-bar navH="{{navH}}" pageTitle="卡券"></top-bar>
+
+<!--活动优惠券-->
+
+<view class='cards' wx:for="{{cardsList}}" wx:key='unique'>
+  <view class='item'>
+    <view class='itemTitle'>
+      <image wx:if="{{item.hascondition==true}}" src="{{item.imgUrl}}"></image>
+      <view class='name'>{{item.shop}}</view>
+    </view>
+    <view class='content'>
+      <view class='price'>
+        <view class='note'>
+          <text class='yuan'>￥</text>
+          <text class='number'>{{item.number}}</text>
+        </view>
+        <view class='clause'>无限制条件</view>
+        <view class='clause'>{{item.start}}-{{item.finish}}</view>
+      </view>
+
+      <view class='useIt'>
+        <view class='word'>前</view>
+        <view class='word'>往</view>
+        <view class='word'>使</view>
+        <view class='word'>用</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+

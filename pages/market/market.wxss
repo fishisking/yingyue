@@ -1,0 +1,362 @@
+/*
+capsule-padding: 6PX; // 胶囊的上下padding距离
+$capsule-height: 32PX; // 胶囊的高度
+$capsule-width: 88PX; // 胶囊的宽度
+$navigation-height: $capsule-padding * 2 + $capsule-height;
+$navigation-font-size: 15PX;
+$navigation-icon-font-size: 25PX;
+$navigation-box-shadow: 0 2PX 2PX #222;
+屏幕宽度750rpx 
+左边距  y字体间距
+*/
+/*tab框样式*/
+
+.flex-row{
+  flex-direction: row;
+  display: flex;
+}
+.onTabLine{
+  width: 120rpx;
+  height: 5rpx;
+  background-color:#4074DD;
+  margin-top:15rpx;
+}
+.line{
+  width: 100%;
+  height: 2rpx;
+  background-color: #F2F2F2;
+  margin: 0rpx auto 0 auto;
+}
+.Photographer,.place,.service{
+  font-size:36rpx;
+  margin-top: 20rpx;
+  width: 200rpx;
+  color:#999999;
+}
+.synthesize,.feedback,.deal,.screen{
+  font-size: 34rpx;
+  margin-top: 20rpx;
+  width: 170rpx;
+  color: #999999;
+}
+
+.Photographer{
+  margin-left: 60rpx;
+}
+.place{
+  margin-left: 29rpx;
+}
+.service{
+  margin-left: 50rpx;
+}
+.synthesize{
+  margin-left: 56rpx;
+}
+.feedback{
+  margin-left: 20rpx;
+}
+.deal{
+  margin-left: 8rpx;
+}
+.screen{
+  margin-left: 12rpx;
+}
+.active{
+  color:#4074DD;
+}
+.selectTab{
+  position: fixed;
+  z-index: 999;
+  color: #ffffff;
+}
+.selectbody{
+  position: fixed;
+  z-index: 998;
+  height: 80rpx;
+  background-color: #ffffff;
+}
+.synthesize image{
+  width: 20rpx;
+  height: 10rpx;
+  margin-bottom: 10rpx;
+} 
+/*城市选择框样式*/ 
+.location{
+  font-size: 36rpx;
+  font-weight: 550;
+  color: #000000;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+.location image{
+  width: 25rpx;
+  height: 20rpx;
+  margin-bottom: 8rpx;
+}
+/*搜索框样式*/ 
+
+.navBar{
+  margin-top:4px;
+  position: fixed;
+  height:40px;
+  z-index: 9999;
+}
+.searchfield{
+  flex-direction: row;
+  display: flex;
+  border: 2rpx solid #93b4f8;
+  border-radius: 36rpx;
+  margin-left:32rpx;
+  width:350rpx;
+  padding:8rpx 0 0 6rpx;
+  font-size:30rpx;
+}
+.search-icon{
+  margin-left: 15rpx;
+  margin-right: 5rpx;
+  margin-top: 2rpx;
+  width: 50rpx;
+  height:40rpx;
+}
+/*租赁机构信息样式*/
+.lease{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* border: 1rpx #f2f2f2 solid; */
+  width: 100%;
+  height: 320rpx;
+}
+.lease-icon image{
+  width: 400rpx;
+  height: 225rpx;
+  border-radius: 20rpx;
+  margin: 40rpx 20rpx 0 20rpx;
+}
+.lease-icon{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.lease-content{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.lease-name{
+  font-size: 36rpx;
+  margin-top: 30rpx;
+  font-weight: 500;
+}
+.lease-place{
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-top: 0rpx;
+}
+.lease-type{
+  margin-top: 20rpx;
+}
+.lease-type .typec{
+  color: #ffbc6b;
+  font-size: 20rpx;
+  border: 3.5rpx #ffbc6b solid;
+  border-radius: 10rpx;
+  margin: 0rpx 5rpx 0 5rpx;
+}
+.lease .grade{
+  font-size: 48rpx;
+  color: #ffbc6b;
+  margin-top:25rpx;
+}
+.other{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.other-colum{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.other-colum .distance{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top:20rpx;
+  margin-left: 30rpx; 
+}
+.other-colum .numbers{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top:10rpx;
+  margin-left: 30rpx; 
+}
+.other image{
+  width: 10rpx;
+  height: 20rpx;
+  margin-top: 75rpx;
+  margin-left: 12rpx;
+}
+
+
+/*摄影机构信息样式*/
+.organ{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  /* border: 1rpx #f2f2f2 solid; */
+  width: 100%;
+  height: 320rpx;
+}
+.organ-icon image{
+  width: 400rpx;
+  height: 225rpx;
+  border-radius: 20rpx;
+  margin: 40rpx 20rpx 0 20rpx;
+}
+.organ-icon{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.organ-content{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.organ-name{
+  font-size: 36rpx;
+  margin-top: 30rpx;
+  font-weight: 500;
+}
+.organ-place{
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-top: 0rpx;
+}
+.organ-type{
+  margin-top: 20rpx;
+}
+.organ-type .typec{
+  color: #93b4f8;
+  font-size: 20rpx;
+  border: 3.5rpx #93b4f8 solid;
+  border-radius: 10rpx;
+  margin: 0rpx 5rpx 0 5rpx;
+}
+.organ .grade{
+  font-size: 48rpx;
+  color: #4074DD;
+  margin-top:25rpx;
+}
+.other{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.other-colum{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.other-colum .distance{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top:20rpx;
+  margin-left: 30rpx; 
+}
+.other-colum .numbers{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top:10rpx;
+  margin-left: 30rpx; 
+}
+.other image{
+  width: 10rpx;
+  height: 20rpx;
+  margin-top: 75rpx;
+  margin-left: 12rpx;
+}
+/*个人信息样式*/
+
+.user{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin:2rpx 0 2rpx 0;
+  /* background-color: #F2F2F2; */
+  width: 100%;
+  height: 212rpx;
+}
+
+.head image{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 26rpx 24rpx 26rpx 34rpx;
+}
+.details{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 56rpx;
+}
+.details .name{
+  font-size: 36rpx;
+  color: #000000;
+}
+.details .byear{
+  color:#6852fd;
+  font-size: 28rpx;
+  margin: 82rpx 0 0 -20rpx;
+}
+.details .gyear{
+  color:#ee5e7b;
+  font-size: 28rpx;
+  margin: 82rpx 0 0 -20rpx;
+}
+.details image{
+
+  margin-top: 24rpx;
+  display: flex;
+  /* flex-wrap: wrap;
+  flex-direction: column; */
+}
+.type{
+    margin: 56rpx 0 0 40rpx;
+}
+.type .typec{
+  color: #6852fd;
+  font-size: 26rpx;
+  border: 3rpx #6852fd solid;
+  border-radius: 10rpx;
+  margin: 0 5rpx 0 5rpx;
+  
+}
+.type .taken{
+  margin-top: 40rpx;
+}
+.type .taken .nums{
+  color:#999999;
+  font-size: 28rpx;
+}
+.type image{
+  width: 10rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.details image{
+  width: 80rpx;
+  height: 40rpx;
+  z-index: 88;
+}
+.grades{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 110rpx 0rpx 0rpx 100rpx;
+}
+.grades text{
+  font-size: 50rpx;
+  color: #6852fd;
+}
+
+

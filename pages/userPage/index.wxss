@@ -1,0 +1,295 @@
+/**index.wxss**/
+
+/**背景**/
+.background_box{
+  position: flex;
+  flex-direction: column;
+}
+
+.navigation{
+  width: 100%;
+  height: 150rpx;
+  text-align: center;
+  background-color: white;
+  position: fixed;
+  z-index: 5;
+}
+
+.title{
+  position: relative;
+  top: 90rpx;
+  font-weight: bold;
+}
+
+
+.background{
+  width: 100%;
+  height: 400rpx;
+  background: linear-gradient(to right,#566AFF,#38C5FF);
+  position: absolute;
+}
+
+.backgroundImage{
+  width: 100%;
+  height: 400rpx;
+}
+
+
+
+
+
+/**用户框**/
+.user_box{    
+  height: 200rpx;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+  border-radius: 18rpx;
+  margin-bottom: 60rpx;
+  padding-bottom: 40rpx;
+  background-color: white;
+  margin-top: 150rpx;
+  z-index: 1;
+}
+
+.user_box  .user{
+  display: flex;
+  flex-direction: column;
+}
+
+.user_head_name{
+  display: flex;
+  flex-direction: row;
+}
+
+.user .user_head{
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  top: -50rpx;
+  left: 40rpx;
+  border-radius: 50rpx;
+}
+
+.user .user_name{
+  position: relative;
+  top: -45rpx;
+  left: 50rpx;
+  font-size: 30rpx;
+  color: white;
+}
+.user .tag{
+  position: relative;
+  top: -55rpx;
+  left: 50rpx;
+  margin-left: 10rpx;
+}
+
+
+.user_box  .project{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 660rpx;
+  justify-content: center;
+}
+
+.fans,.interests,.works,.footprint{
+  width: 165rpx;
+}
+
+.number{
+  margin-bottom:10rpx;
+}
+
+.project_name{
+  font-size: 25rpx;
+  color: #878787;
+}
+.project_name .name{
+  display: inline-block;
+  margin: 0 50rpx;
+  line-height: 25rpx;
+}
+.project_name .project_apart{
+  display: inline-block;
+}
+
+
+.grade{
+  position: relative;
+  display: flex;
+  text-align: center;
+  left: 150rpx;
+  top: -85rpx;
+  line-height: 30rpx;
+}
+
+.creditGrade,.feedbackGrade,.apartSymbol{
+  font-size: 30rpx;
+  color: #878787;
+  margin-right: 20rpx;
+  line-height: 30rpx;
+}
+.creditNumber,.feedbackNumber{
+  font-size: 30rpx;
+  color: #38C5FF;
+  line-height: 30rpx;
+}
+
+
+/**摄影师的订单**/
+.photographer_box{
+  width: 660rpx;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+  border-radius: 18rpx;
+  height: 250rpx;
+  margin-bottom: 60rpx;
+}
+
+.photographer_box .box_title{
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.my_title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+
+.box_content {
+  display: flex;
+  text-align: center;
+  width: 660rpx;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.box_content .item{
+  width: 25%;
+  font-size: 26rpx;
+  color: #878787;
+}
+
+.box_content image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+
+
+
+/**我的订单**/
+.my_box{
+  width: 660rpx;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+  border-radius: 18rpx;
+  height: 250rpx;
+  margin-bottom: 60rpx;
+}
+
+.my_box .box_title{
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.my_title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+
+.box_content {
+  display: flex;
+  text-align: center;
+  width: 660rpx;
+}
+
+.box_content .item{
+  width: 20%;
+  font-size: 26rpx;
+  color: #878787;
+}
+
+.box_content image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+
+/**相关服务订单**/
+
+.service_box{
+  width: 660rpx;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+  border-radius: 18rpx;
+  height: 250rpx;
+  margin-bottom: 60rpx;
+}
+
+.service_box .box_title{
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.my_title{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+
+.box_content {
+  display: flex;
+  text-align: center;
+  width: 660rpx;
+}
+
+.service_box .box_content .item{
+  width: 25%;
+  font-size: 26rpx;
+  color: #878787;
+}
+
+.box_content image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**选择框**/
+.choose_box {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 330rpx;
+  padding-top: 50rpx;
+  box-shadow: 0 6rpx 24rpx rgba(25, 118, 210, 0.08);
+  border-radius: 18rpx;
+}
+
+.choose_box .item{
+  width: 25%;
+  height: 150rpx;
+  font-size: 26rpx;
+  color: #878787;
+}
+
+.choose_box image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+  margin: 10rpx;
+}

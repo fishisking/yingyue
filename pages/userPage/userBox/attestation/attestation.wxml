@@ -1,0 +1,20 @@
+<!--pages/userPage/userBox/attestation/attestation.wxml-->
+<top-bar navH="{{navH}}" pageTitle="认证"></top-bar>
+<view class='contain'>
+  <view class='item'>
+    <view class='itemTitle'>实名认证</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+  <view class='item'>
+    <view class='itemTitle'>摄影师认证</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+  <view class='item'>
+    <view class='itemTitle'>摄影机构认证</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+  <view class='item'>
+    <view class='itemTitle'>相关服务认证</view>
+    <image src='./icon/icon.png'></image>
+  </view>
+</view>
